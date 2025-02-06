@@ -1,0 +1,39 @@
+:host{
+    background-color: var(--accent-background-color);
+    display: block;
+    color: var(--font-color)
+}
+h1{
+    font-weight: 500;
+    margin: 0;
+    padding: 2vh 0 1vh;
+}
+.mainContent{
+    min-width: 380px;
+    width: 60vw;
+    display:block;
+    margin: 0 auto;
+    .blockOfContent{
+        background-color: var(--background-color);
+        padding: 0% 1%;
+        height: 20vh;
+        min-height: 100px;
+        border: 2px solid var(--font-color);
+        overflow-y: auto;
+        scrollbar-color: var(--font-color) var(--background-color);
+        scrollbar-width:3px;
+        ul, ol{
+            margin: 0;
+            li{
+                margin: 1vh 0;
+                font-size: 20px;
+                a{
+                    color: var(--font-color);
+                }
+            }
+        }
+        p{
+            margin: 0;
+        }
+    }
+}

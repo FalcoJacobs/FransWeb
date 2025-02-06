@@ -1,0 +1,21 @@
+<div class="searchbar">
+    <input type="text" id="searchbar" class="searchTextBar" placeholder="Recherche" (input)="OnSearchChange($event)" autocomplete="off" (keydown)="onKeyPress($event)">
+    <ul *ngIf="showResults" class="search-results">
+      <li *ngFor="let item of filteredItems" (click)="selectItem(item)"> {{ item.name }} {{ item.translation }} - Niveau: {{ item.level }}</li>
+    </ul>
+</div>
+<main>
+    <div class="grammaire">
+        <div *ngFor="let category of grammaireCategories" class="category">
+          <h2>{{ category.category }}</h2>
+          <div class="scroll-container">
+            <div *ngFor="let item of category.items" class="grammar-item">
+              <h3>{{ item.name }}</h3>
+              <p>{{ item.translation }}</p>
+              <span class="level">Niveau: {{ item.level }}</span>
+              <a [routerLink]="['/home/grammaire', item.path]">Bekijk uitleg</a>
+            </div>
+          </div>
+        </div>
+    </div>
+</main>

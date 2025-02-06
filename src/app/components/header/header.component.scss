@@ -1,0 +1,45 @@
+header{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--background-color);
+    color: var(--font-color);
+    box-sizing: border-box;
+    padding: .5vh 1.5vw;
+    h1{
+        display: inline-block;
+        font-size: 35px;
+    }
+    nav{
+        display: flex;
+        gap: 2vw;
+        a{
+            font-size: 27px;
+            opacity: .8;
+            transition: .2s;
+            color: var(--font-color);
+            text-decoration: none;
+            &:hover{
+                opacity: 1;
+                cursor: pointer;
+                text-decoration: underline;
+            }
+        }
+        button{
+            font-size: 27px;
+            opacity: .8;
+            transition: .2s;
+            color: var(--font-color);
+            text-decoration: none;
+            background-color: rgba($color: #000000, $alpha: 0);
+            border: 1px solid rgba($color: #000000, $alpha: 0);
+            &:hover{
+                opacity: 1;
+                cursor: pointer;
+                border: 1px solid var(--font-color);
+                background-color: var(--font-color);
+                color: var(--background-color);
+            }
+        }
+    }
+}

@@ -1,0 +1,113 @@
+:host{
+    background-color: var(--accent-background-color);
+    display: block;
+}
+.searchbar{
+    width: fit-content;
+    display: block;
+    padding: 2vh 0;
+    margin: 0 auto;
+    .searchTextBar{
+        width: 30vw;
+        font-size: 25px;
+        border: none;
+        border-bottom: 2px solid var(--background-color);
+        background-color: var(--accent-background-color);
+        color: var(--font-color);
+        transition: .5s;
+        text-align: center;
+        cursor: text;
+        &:focus{
+            outline: none;
+            border-bottom: 2px solid var(--font-color);
+        }
+    }
+    .search-results {
+      list-style: none;
+      padding: 0;
+      margin-top: .5vh;
+      background-color: var(--accent-background-color);
+      border: 1px solid var(--font-color);
+      width: 30vw;
+      max-height: 200px;
+      overflow-y: auto;
+      position: absolute;
+      z-index: 10;
+      transition: 1s;
+  
+      li {
+        transition: 1s;
+        padding: 1%;
+        cursor: pointer;
+        color: var(--font-color);
+        &:hover {
+          background-color: var(--background-color);
+        }
+        &:first-of-type{
+          background-color: var(--background-color);
+        }
+      }
+  }
+}
+main{
+    overflow-y: auto;
+    .grammaire {
+        padding: 0% 1%;
+    }
+    .category {      
+        margin-bottom: 3vh;
+        h2 {
+          font-size: 30px;
+          color: var(--font-color);
+          text-align: center;
+        }
+        .scroll-container {
+          display: flex;
+          overflow-x: auto;
+          gap: 1.5vw;
+          padding-bottom: 2vh;
+          scrollbar-width: thin;
+          scrollbar-color: var(--font-color) var(--background-color);
+        }
+      
+        .grammar-item {
+          min-width: 20vw;
+          width: 20vw;
+          background: var(--background-color);
+          color: var(--font-color);
+          padding: 1.5%;
+          border-radius: 8px;
+          box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+          text-align: center;
+          h3{
+            font-size: 25px;
+            margin: 1vh 0;
+          }
+          p{
+            font-size: 19px;
+          }
+          a{
+            color: var(--font-color);
+            font-size: 20px;
+            border: 1px solid var(--font-color);
+            padding: 2%;
+            text-decoration: none;
+            &:hover{
+                background-color: var(--font-color);
+                color: var(--accent-background-color);
+                opacity: .85;
+            }
+          }
+        }
+      
+        .level {
+          display: block;
+          margin-top: 1vh;
+          font-size: 17px;
+          opacity: .6;
+          margin-bottom: 2vh;
+        }
+    }
+
+}
+  

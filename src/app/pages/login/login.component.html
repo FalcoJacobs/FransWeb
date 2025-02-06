@@ -1,0 +1,14 @@
+<div class="signUpContainer">
+    <h1>Login</h1>
+    <form [formGroup]="loginform" (ngSubmit)="loginSubmit()">
+        <div class="formElement">
+            <label for="email">Email: </label>
+            <input type="email" id="email" formControlName="email" autocomplete="off" required >
+        </div>
+        <div class="formElement">
+            <label for="password">Password: </label>
+            <input type="password" id="password" formControlName="password" autocomplete="off" required>
+        </div>
+        <button type="submit" [disabled]="loginform.invalid">Login</button>
+    </form>
+</div>

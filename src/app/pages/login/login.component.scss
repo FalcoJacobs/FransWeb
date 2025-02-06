@@ -1,0 +1,54 @@
+:host{
+    display: block;
+    background-color: var(--background-color);
+    box-sizing: border-box;
+    min-height: 100vh;
+    min-width: 100vw;
+    color: var(--font-color);
+    position: fixed;
+}
+.signUpContainer{
+   border: 1px solid var(--font-color);
+   box-sizing: border-box;
+   padding: 2vh 5vw;
+   min-width: 380px;
+   width: fit-content;
+   margin: 15vh auto;
+   position: relative;
+   h1{
+    margin: 0;
+    margin-bottom: 3vh;;
+    border-bottom: 2px solid var(--font-color);
+    padding: 2%;
+    text-align:center;
+   }
+   form{
+    .formElement{
+        margin-bottom: 3vh;
+        label{
+            display: block;
+            font-size: 20px;
+        }
+        input{
+            min-width: 320px;
+            font-size: 20px;
+            margin: 0 auto;
+            &:hover{
+                cursor: text;
+            }
+        }
+    }
+    button{
+        min-width: fit-content;
+        width: 7vw;
+        margin: 1vh auto;
+        display: block;
+        font-size: 20px;
+        background-color: var(--font-color);
+        border: none;
+        &:hover{
+            cursor: pointer;
+        }
+    }
+   }
+}
