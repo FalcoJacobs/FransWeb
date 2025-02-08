@@ -12,6 +12,7 @@
             <div *ngFor="let item of category.items" class="vocabulaire-item">
               <h3>{{ item.name }}</h3>
               <p>{{ item.translation }}</p>
+              <span class="level">Lijst lengte: {{ item.wordCount }} woorden</span>
               <span class="level">Werkelijke bruikbaarheid: {{ item.usability }}</span>
               <a routerLink="/home/vocabulaire/test">Beoefen lijst</a>
               <a routerLink="/home/vocabulaire/test" class="vocabContentLink">Bekijk lijst inhoud</a>

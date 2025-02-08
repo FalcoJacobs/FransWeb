@@ -25,7 +25,7 @@ export class VocabulaireOfficialComponent {
 
   OnSearchChange(event: Event) {
     const value = (event.target as HTMLInputElement).value.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
-    console.log(vocabLists['lance5-t1-e1'])
+    console.log(vocabLists['lance5-t1-e2'])
     this.filteredItems = this.allItems.filter(item =>
       this.normalizeText(item.name).includes(value) || this.normalizeText(item.translation).includes(value)
     );
@@ -43,7 +43,7 @@ export class VocabulaireOfficialComponent {
   }
 
   selectItem(item: any) {
-    this.router.navigate(['/home/grammaire', item.path]);
+    this.router.navigate(['/home/vocabulaire/test']);
     this.showResults = false;
   }
   
