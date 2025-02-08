@@ -1,1 +1,21 @@
-<p>vocabulaire-official works!</p>
+<div class="searchbar">
+    <input type="text" id="searchbar" class="searchTextBar" placeholder="Recherche" (input)="OnSearchChange($event)" autocomplete="off" (keydown)="onKeyPress($event)">
+    <ul *ngIf="showResults" class="search-results">
+      <li *ngFor="let item of filteredItems" (click)="selectItem(item)"> {{ item.name }} {{ item.translation }} - Niveau: {{ item.level }}</li>
+    </ul>
+</div>
+<main>
+    <div class="vocabulaire">
+        <div *ngFor="let category of vocabulaireCategories" class="category">
+          <h2>{{ category.category }}</h2>
+          <div class="scroll-container">
+            <div *ngFor="let item of category.items" class="vocabulaire-item">
+              <h3>{{ item.name }}</h3>
+              <p>{{ item.translation }}</p>
+              <span class="level">usability: {{ item.usability }}</span>
+              <a routerLink="/home/vocabulaire/test">Bekijk uitleg</a>
+            </div>
+          </div>
+        </div>
+    </div>
+</main>

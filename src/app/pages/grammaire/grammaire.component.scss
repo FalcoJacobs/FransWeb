@@ -71,7 +71,7 @@ main{
         }
       
         .grammar-item {
-          min-width: 20vw;
+          min-width: max(20vw, 220px);
           width: 20vw;
           background: var(--background-color);
           color: var(--font-color);
