@@ -25,6 +25,7 @@ export class VocabulaireOfficialComponent {
 
   OnSearchChange(event: Event) {
     const value = (event.target as HTMLInputElement).value.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+    console.log(vocabLists['lance5-t1-e1'])
     this.filteredItems = this.allItems.filter(item =>
       this.normalizeText(item.name).includes(value) || this.normalizeText(item.translation).includes(value)
     );

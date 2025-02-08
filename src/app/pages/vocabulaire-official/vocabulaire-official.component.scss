@@ -98,6 +98,17 @@ main{
                 opacity: .85;
             }
           }
+          .vocabContentLink{
+            text-decoration: underline;
+            border: none;
+            display: block;
+            font-size: 16px;
+            margin-top: 1.5vh;
+            &:hover{
+              background-color: var(--background-color);
+              color: var(--font-color);
+            }
+          }
         }
       
         .level {

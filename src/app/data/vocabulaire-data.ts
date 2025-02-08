@@ -6,14 +6,27 @@ export const vocabulaireCategories = [
                 name: "100 verbes les plus courants",
                 translation: "100 meest voorkomende werkwoorden",
                 wordCount: 100,
-                usability: 'high',
+                usability: 'hoog',
                 path: 'most-common-verbes'
             },
+        ]
+    },
+    {
+        category: "C'est Lancé 5",
+        items: [
+            {
+                name: "Tour 1 Étape 1",
+                translation: '',
+                wordCount: 48,
+                usability: 'medium',
+                path: 'lance5-t1-e1'
+            }
         ]
 
     }
 ]
-export const vocabLists = [
+export const vocabLists = {
+    "most-common-verbes": [
     { dutch: "zijn", french: "être"},
     { dutch: "hebben", french: "avoir"},
     { dutch: ["doen", "maken"], french: "faire"},
@@ -114,4 +127,55 @@ export const vocabLists = [
     { dutch: "dol zijn op", french: "adorer"},
     { dutch: "zich herinneren", french: "se rappeler"},
     { dutch: ["zich amuseren", "plezier hebben"], french: "s'amuser"},
-]
+    ],
+    "lance5-t1-e1": [
+        { dutch: "een toekomst", french: "un avenir"},
+        { dutch: "het vrijwilligerswerk", french: ["le bénévolat", "le volontariat"]},
+        { dutch: "een vrijwilliger", french: "un bénévole"},
+        { dutch: "een vrijwilligster", french: "une bénévole"},
+        { dutch: "een goede zaak", french: "une bonne cause"},
+        { dutch: "une oorzaak", french: "een cause"},
+        { dutch: "een verandering", french: "un changement"},
+        { dutch: "een leider", french: "un chef"},
+        { dutch: "een leidster", french: "une cheffe"},
+        { dutch: "de diversiteit", french: "la diversité"},
+        { dutch: ["een engagement", "iets waar je je voor inzet"], french: "un engagement"},
+        { dutch: "het milieu", french: "l'environement"},
+        { dutch: "een generatie", french: "une génération"},
+        { dutch: "een merk", french: "une marque"},
+        { dutch: "een lid", french: ["un membre", "une membre"]},
+        { dutch: "een jeugdbeweging", french: "un mouvement de jeunesse"},
+        { dutch: "een reden", french: "une raison"},
+        { dutch: ["een tendens", "een trend"], french: "une tendance"},
+        { dutch: "een vrijwilliger", french: "un volontaire"},
+        { dutch: "een vrijwilligster", french: "une volontaire"},
+        { dutch: "nuttig", french: "utile"},
+        { dutch: "handelen", french: "agir"},
+        { dutch: "bevestigen", french: "confirmer"},
+        { dutch: "bevestigd worden", french: "se confirmer"},
+        { dutch: "zich beschouwen als", french: "se considérer comme"},
+        { dutch: ["bouwen", "opbouwen"], french: "construire"},
+        { dutch: "uitdelen", french: "distribuer"},
+        { dutch: ["zich engageren", "zich inzetten"], french: "s'engager"},
+        { dutch: "duwen", french: "pousser"},
+        { dutch: "drijven tot", french: "pousser à"},
+        { dutch: "zich voelen", french: "se sentir"},
+        { dutch: "zin hebben in/om", french: "avoir envie de"},
+        { dutch: "mensen ontmoeten", french: "faire des rencontres"},
+        { dutch: "iemand een plezier doen", french: "faire plaisir à"},
+        { dutch: "kortom", french: "bref"},
+        { dutch: "tweedehands", french: "de seconde main"},
+        { dutch: "een ongelijkheid", french: "une inégalité"},
+        { dutch: "de gerechtigheid", french: "la justice"},
+        { dutch: "een inzameling", french: "une récolte"},
+        { dutch: "een dakloze", french: ["un SDF", "un sans domicile fixe"]},
+        { dutch: "bewogen door", french: ["animé par", "animée par"]},
+        { dutch: ["onmiddelijk", "snel"], french: ["immédiat", "immédiate"]},
+        { dutch: ["opvallend", "opmerkelijk"], french: ["marquant", "marquante"]},
+        { dutch: "tijd besteden aan", french: "consacrer à"},
+        { dutch: ["bewegen om", "aansporen tot"], french: "engager à"},
+        { dutch: "iemand aanwerven", french: "engager quelqu'un"},
+        { dutch: "een boodschap overbrengen", french: "faire passer un message"},
+        { dutch: ["tegenwoordig", "nu"], french: "actuellement"}
+    ]
+}
