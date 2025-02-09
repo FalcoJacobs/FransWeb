@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { vocabulaireCategories } from '../../data/vocabulaire-data';
-import { vocabLists } from '../../data/vocabulaire-data';
-import { CommonModule } from '@angular/common';
+import { CommonModule, ɵnormalizeQueryParams } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { Router } from '@angular/router';
 
@@ -25,7 +24,6 @@ export class VocabulaireOfficialComponent {
 
   OnSearchChange(event: Event) {
     const value = (event.target as HTMLInputElement).value.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
-    console.log(vocabLists['lance5-t1-e2'])
     this.filteredItems = this.allItems.filter(item =>
       this.normalizeText(item.name).includes(value) || this.normalizeText(item.translation).includes(value)
     );
@@ -43,7 +41,7 @@ export class VocabulaireOfficialComponent {
   }
 
   selectItem(item: any) {
-    this.router.navigate(['/home/vocabulaire/test']);
+    this.router.navigate(['/home/vocabulaire/test-options'], {queryParams:{list: item.id}});
     this.showResults = false;
   }
   

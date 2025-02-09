@@ -1,0 +1,19 @@
+<div class="vocabTestOptions">
+    <h1>Kies je opties voor de test:</h1>
+    <p>(De moeilijkheidsgraad van de oefeningen heeft impact op het te verdienen xp)</p>
+    <div class="checkboxes">
+        <label>
+            <input type="checkbox" [(ngModel)]="accentgevoelig"> Accentgevoeligheid <em>( +30% xp )</em>
+        </label>
+        <label>
+            <input type="checkbox" [(ngModel)]="tijddruk"> Tijddruk: je hebt maar 15 seconden <br> de tijd om een antwoord te typen <em>( + 15% )</em>
+        </label>
+        <label>
+            <input type="checkbox" [(ngModel)]="toetsmodus"toets> Toetsmodus <em>( + 20% xp )</em>
+        </label>
+        <label>
+            <input type="checkbox" [(ngModel)]="herhaalFouten"> Herhaal fouten <em>( + 10% xp )</em>
+        </label>
+        <button (click)="startTest()">Start Test</button>
+    </div>
+</div>

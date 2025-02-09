@@ -14,8 +14,7 @@
               <p>{{ item.translation }}</p>
               <span class="level">Lijst lengte: {{ item.wordCount }} woorden</span>
               <span class="level">Werkelijke bruikbaarheid: {{ item.usability }}</span>
-              <a routerLink="/home/vocabulaire/test">Beoefen lijst</a>
-              <a routerLink="/home/vocabulaire/test" class="vocabContentLink">Bekijk lijst inhoud</a>
+              <a [routerLink]="['/home/vocabulaire/test-options']" [queryParams]="{ list: item.id }">Selecteer lijst</a>
             </div>
           </div>
         </div>
