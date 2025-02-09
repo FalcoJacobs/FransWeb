@@ -2,7 +2,7 @@
     background-color: var(--background-color);
     padding: 3%;
     width: 60vw;
-    margin: 5vh auto;
+    margin: 3vh auto;
     h1{
         text-align: center;
         font-size: 40px;
@@ -34,6 +34,23 @@
             margin: 0;
             font-size: 25px;
             display: inline-block;
+        }
+    }
+    .correct{
+        color: #00FF00;
+        opacity: .8;
+    }
+    .incorrect{
+        color: #FF0000;
+    }
+    table{
+        display: block;
+        margin: 0 auto;
+        width: fit-content;
+        td{
+            font-size: 25px;
+            padding: 1%;
+            min-width: 14vw;
         }
     }
 }

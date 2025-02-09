@@ -3,10 +3,11 @@ import { ActivatedRoute } from '@angular/router';
 import { vocabLists } from '../../data/vocabulaire-data';
 import { VocabWord } from '../../data/vocabulaire-data';
 import { FormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-vocabulaire-test',
-  imports: [FormsModule],
+  imports: [FormsModule, CommonModule],
   templateUrl: './vocabulaire-test.component.html',
   styleUrl: './vocabulaire-test.component.scss'
 })

@@ -45,3 +45,24 @@
         }
     }
 }
+.vocabListItems{
+    background-color: var(--background-color);
+    width: fit-content;
+    min-width: 50vw;
+    margin: 0 auto;
+    padding: 1%;
+    table{
+        display: block;
+        margin: 0 auto;
+        width: fit-content;
+        border-spacing: 1vw;
+        td{
+            font-size: 22px;
+            padding: 1%;
+            border-bottom: 1px solid var(--font-color);
+            box-sizing: border-box;
+            padding-left: 0;    
+            padding-bottom: 0;
+        }
+    }
+}

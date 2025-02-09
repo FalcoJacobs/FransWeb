@@ -4,13 +4,32 @@
 </div>
 
 <div class="stats">
-    <h1>{{ isCorrect === null ? '...' : (isCorrect ? 'Juist' : 'Fout') }}</h1>
+    <h1 [ngClass]="{'correct': isCorrect === true, 'incorrect': isCorrect === false}">{{ isCorrect === null ? '...' : (isCorrect ? 'Juist' : 'Fout') }}</h1>
     <hr>
-    <span><p>Woorden:&nbsp;</p><p>{{ totalIncorrect + totalCorrect }} / {{ vocabList.length + mistakesAdded }}</p></span>
-    <span><p>Accuraat:&nbsp;</p><p>{{ accuracy }}%</p></span>
+    <table>
+        <tr>
+            <td>Woorden:</td>
+            <td>{{ totalIncorrect + totalCorrect }} / {{ vocabList.length + mistakesAdded }}</td>
+        </tr>
+        <tr>
+            <td>Accuraat</td>
+            <td>{{ accuracy }}% ({{ totalCorrect }} / {{ totalCorrect + totalIncorrect }})</td>
+        </tr>
+    </table>
     <hr>
     <h2><u>Vorige vraag:</u></h2>
-    <span><p>Nederlands woord:&nbsp;</p><p>{{ previousDutch || '...' }}</p></span>
-    <span><p>Ingevoerd woord:&nbsp;</p><p>{{ previousInput || '...'}}</p></span>
-    <span><p>Correct Frans woord:&nbsp;</p><p>{{ previousFrench || '...'}}</p></span>
+    <table>
+        <tr>
+            <td>Nederlands woord</td>
+            <td>{{ previousDutch || '...' }}</td>
+        </tr>
+        <tr>
+            <td>ingevoerd woord:</td>
+            <td [ngClass]="{'correct': isCorrect === true, 'incorrect': isCorrect === false}">{{ previousInput || '...'}}</td>
+        </tr>
+        <tr>
+            <td>Correct Frans woord</td>
+            <td>{{ previousFrench || '...'}}</td>
+        </tr>
+    </table>
 </div>

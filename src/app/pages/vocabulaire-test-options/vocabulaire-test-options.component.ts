@@ -1,15 +1,18 @@
 import { Component, OnInit} from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { FormsModule } from '@angular/forms';
+import { vocabLists } from '../../data/vocabulaire-data';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-vocabulaire-test-options',
-  imports: [FormsModule],
+  imports: [FormsModule, CommonModule],
   templateUrl: './vocabulaire-test-options.component.html',
   styleUrl: './vocabulaire-test-options.component.scss'
 })
 export class VocabulaireTestOptionsComponent {
   listId: string = '';
+  vocabList: any[] = [];
   
   accentgevoelig: boolean = true;
   tijddruk: boolean = false;
@@ -20,7 +23,14 @@ export class VocabulaireTestOptionsComponent {
 
   ngOnInit() {
     this.route.queryParams.subscribe(params => {
+      const listId = params['list'];
       this.listId = params['list'];
+      if (listId && vocabLists[listId]) {
+        this.vocabList = vocabLists[listId].words;
+        console.log(this.vocabList);
+      } else {
+        alert('Lijst niet gevonden.');
+      }
     });
   }
 

@@ -17,3 +17,12 @@
         <button (click)="startTest()">Start Test</button>
     </div>
 </div>
+<div class="vocabListItems">
+    <table>
+        <tr *ngFor = 'let word of vocabList; let i = index;'>
+            <td>{{i + 1}} </td>
+            <td>{{word.dutch}}</td>
+            <td>{{word.french}}</td>
+        </tr>
+    </table>
+</div>
