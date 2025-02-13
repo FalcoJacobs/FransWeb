@@ -1,0 +1,33 @@
+.formBlock{
+    margin: 5vh 4vw;
+    background-color: var(--background-color);
+    width: 25vw;
+    display: inline-block;
+    padding: 1%;
+    vertical-align: top;
+    border: 1px solid var(--font-color);
+    h2{
+        font-size: 30px;
+        text-align: center;
+    }
+    form{
+        overflow-y: auto;
+        height: 35vh;
+        scrollbar-color: var(--font-color) var(--background-color);
+        width: fit-content;
+        margin: 0 auto;
+        padding: 0% 5%;
+    }
+    .formItem{
+        label{
+            font-size: 27px;
+            &:hover{
+                cursor: pointer;
+            }
+        }
+        input{
+            height: 20px;
+            width: 20px;
+        }
+    }
+}

@@ -1,0 +1,33 @@
+<div class="formBlock">
+    <h2>Temps:</h2>
+    <hr>
+    <form>
+        <div *ngFor= "let tense of tenses" class="formItem">
+            <label>
+                <input type="checkbox" name="tenseCheckboxes"> {{ tense }}
+            </label>
+        </div>
+    </form>
+</div>
+<div class="formBlock">
+    <h2>Verbes irréguliers:</h2>
+    <hr>
+    <form>
+        <div *ngFor= "let verb of irregularVerbs" class="formItem">
+            <label>
+                <input type="checkbox" name="irregVerbCheckboxes"> {{ verb }}
+            </label>
+        </div>
+    </form>
+</div>
+<div class="formBlock">
+    <h2>Verbes réguliers: </h2>
+    <hr>
+    <form>
+        <div *ngFor= "let verb of regularVerbs" class="formItem">
+            <label>
+                <input type="checkbox" name="regVerbCheckboxes"> {{ verb }}
+            </label>
+        </div>
+    </form>
+</div>

@@ -28,6 +28,8 @@ import { PasseSimpleComponent } from './pages/grammaire-pages/passe-simple/passe
 import { ConditionnelPresentComponent } from './pages/grammaire-pages/conditionnel-present/conditionnel-present.component';
 import { SubjonctifPresentComponent } from './pages/grammaire-pages/subjonctif-present/subjonctif-present.component';
 
+import { ConjugaisonSelectComponent } from './pages/conjugaison-select/conjugaison-select.component';
+
 export const routes: Routes = [
     { path:'', component: HomeComponent},
     { path:'login', component: LoginComponent},
@@ -57,6 +59,9 @@ export const routes: Routes = [
             { path: 'grammaire/conditionnel-present', component: ConditionnelPresentComponent},
             { path: 'grammaire/subjonctif-present', component: SubjonctifPresentComponent},
             { path: 'grammaire/present', component: PresentComponent},
+
+
+            { path: 'conjugaison/select', component: ConjugaisonSelectComponent},
         ]
     }
 ];
