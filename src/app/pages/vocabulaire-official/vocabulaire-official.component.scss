@@ -2,6 +2,14 @@
     background-color: var(--accent-background-color);
     display: block;
 }
+h5{
+  text-align: center;
+  margin: 0;
+  background-color: var(--background-color);
+  border-top: 1px solid var(--font-color);
+  padding: .3%;
+  opacity: .5;
+}
 .searchbar{
     width: fit-content;
     display: block;

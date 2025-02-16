@@ -1,33 +1,96 @@
 .formBlock{
-    margin: 5vh 4vw;
+    margin: 3vh 3.8vw 3vh;
     background-color: var(--background-color);
     width: 25vw;
     display: inline-block;
     padding: 1%;
     vertical-align: top;
-    border: 1px solid var(--font-color);
+    outline: 1px solid var(--font-color);
     h2{
-        font-size: 30px;
+        font-size: 25px;
         text-align: center;
     }
     form{
         overflow-y: auto;
-        height: 35vh;
+        height: 28vh;
         scrollbar-color: var(--font-color) var(--background-color);
         width: fit-content;
         margin: 0 auto;
         padding: 0% 5%;
+        box-sizing: border-box;
     }
     .formItem{
         label{
-            font-size: 27px;
+            font-size: 23px;
+            -webkit-user-select: none; /* Safari */
+            -ms-user-select: none; /* IE 10 and IE 11 */
+            user-select: none; /* Standard syntax */
             &:hover{
                 cursor: pointer;
             }
         }
         input{
-            height: 20px;
-            width: 20px;
+            height: 16px;
+            width: 16px;
+            accent-color: var(--background-color);
+            outline: 1px solid var(--font-color);
         }
+    }
+}
+.extraOptionsTab{
+    border: 1px solid var(--font-color);
+    width: 80vw;
+    margin: 0 auto;
+    background-color: var(--background-color);
+    padding: 1%;
+    h2{
+        margin:  0 0 1vh 0;
+        text-decoration: underline;
+        font-size: 25px;
+        text-align: center;
+    }
+    form{
+        width: fit-content;
+        margin: 0 auto;
+    }
+    label{
+        display: block;
+        font-size: 23px;
+        -webkit-user-select: none; /* Safari */
+        -ms-user-select: none; /* IE 10 and IE 11 */
+        user-select: none; /* Standard syntax */
+        &:hover{
+            cursor: pointer;
+        }
+    }
+    input{
+        margin-right: 2%;
+        height: 16px;
+        width: 16px;
+        accent-color: var(--background-color);
+        outline: 1px solid var(--font-color);
+    }
+    .numberInput{
+        width: max(4vw, 70px);
+        padding: 1%;
+        font-size: 20px;
+    }
+}
+button{
+    padding: .6%;
+    margin: 3vh auto;
+    font-size: 29px;
+    display: block;
+    background-color: var(--background-color);
+    color: var(--font-color);
+    border: none;
+    border: 1px solid var(--font-color);
+    opacity: .9;
+    &:hover{
+        cursor: pointer;
+        opacity: 1;
+    }
+    &:disabled{
+        opacity: .3;
     }
 }

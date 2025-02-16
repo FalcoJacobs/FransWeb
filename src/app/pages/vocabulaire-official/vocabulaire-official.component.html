@@ -1,7 +1,8 @@
+<h5>Voor woorden uit specifieke lijsten (zoals uit werkboeken) worden enkel specifieke antwoorden goed gekeurd</h5>
 <div class="searchbar">
     <input type="text" id="searchbar" class="searchTextBar" placeholder="Recherche" (input)="OnSearchChange($event)" autocomplete="off" (keydown)="onKeyPress($event)">
     <ul *ngIf="showResults" class="search-results">
-      <li *ngFor="let item of filteredItems" (click)="selectItem(item)"> {{ item.name }} {{ item.translation }} - Niveau: {{ item.level }}</li>
+      <li *ngFor="let item of filteredItems" (click)="selectItem(item)">{{ item.name }} {{ item.translation }} - Niveau: {{ item.level }}</li>
     </ul>
 </div>
 <main>

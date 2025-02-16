@@ -29,6 +29,7 @@ import { ConditionnelPresentComponent } from './pages/grammaire-pages/conditionn
 import { SubjonctifPresentComponent } from './pages/grammaire-pages/subjonctif-present/subjonctif-present.component';
 
 import { ConjugaisonSelectComponent } from './pages/conjugaison-select/conjugaison-select.component';
+import { ConjugaisonTestComponent } from './pages/conjugaison-test/conjugaison-test.component';
 
 export const routes: Routes = [
     { path:'', component: HomeComponent},
@@ -62,6 +63,7 @@ export const routes: Routes = [
 
 
             { path: 'conjugaison/select', component: ConjugaisonSelectComponent},
+            { path: 'conjugaison/test', component: ConjugaisonTestComponent},
         ]
     }
 ];

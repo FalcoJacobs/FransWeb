@@ -4,7 +4,7 @@
     <form>
         <div *ngFor= "let tense of tenses" class="formItem">
             <label>
-                <input type="checkbox" name="tenseCheckboxes"> {{ tense }}
+                <input type="checkbox" (change)="toggleSelection(selectedTenses, tense)" name="tense-{{tense}}"> {{ tense }}
             </label>
         </div>
     </form>
@@ -15,7 +15,7 @@
     <form>
         <div *ngFor= "let verb of irregularVerbs" class="formItem">
             <label>
-                <input type="checkbox" name="irregVerbCheckboxes"> {{ verb }}
+                <input type="checkbox" (change)="toggleSelection(selectedIrregularVerbs, verb)" name="irregVerb-{{verb}}"> {{ verb }}
             </label>
         </div>
     </form>
@@ -26,8 +26,29 @@
     <form>
         <div *ngFor= "let verb of regularVerbs" class="formItem">
             <label>
-                <input type="checkbox" name="regVerbCheckboxes"> {{ verb }}
+                <input type="checkbox" (change)="toggleSelection(selectedRegularVerbs, verb)" name="regVerb-{{verb}}"> {{ verb }}
             </label>
         </div>
     </form>
 </div>
+<div class="extraOptionsTab">
+    <h2>Options supplémentaires</h2>
+    <form>
+        <label>
+            <input type="checkbox" [(ngModel)]="testMode" name="testMode">Toetsmodus
+        </label>
+        <label>
+            <input type="checkbox" [(ngModel)]="accentSensitive" name="accentSensitive">Accentgevoeligheid
+        </label>
+        <label>
+            <input type="checkbox" [(ngModel)]="allowMistakes" name="allowMistakes">Doorgaan ondanks verkeerd antwoord
+        </label>
+        <label>
+            <input type="checkbox" [(ngModel)]="hideResults" name="hideResults">Verberg resultaat
+        </label>
+        <label>
+            Aantal oefeningen: <input type="number" class="numberInput" min="1" value="20" [(ngModel)]="numExercises" name="numExercises">
+        </label>
+    </form>
+</div>
+<button (click)="startTest()" [disabled]="!canStartTest()" title="Selecteer minstens 1 tijd en 1 werkwoord :)">Start Test</button>

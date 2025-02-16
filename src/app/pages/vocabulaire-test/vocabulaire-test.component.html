@@ -1,6 +1,6 @@
 <div class="vocabulaireInput">
     <h1>{{ currentWord?.dutch || '...'}}</h1>
-    <input [(ngModel)]="userInput" (keydown.enter)="checkAnswer()" placeholder="Franse vertaling">
+    <input [(ngModel)]="userInput" (keydown.enter)="checkAnswer()" placeholder="Franse vertaling" autocomplete="off" spellcheck="false">
 </div>
 
 <div class="stats">
