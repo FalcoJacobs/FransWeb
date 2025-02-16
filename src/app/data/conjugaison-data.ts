@@ -1,9 +1,21 @@
+export interface VerbConjugation {
+    [subject: string]: string;
+}
+  
+export interface VerbData {
+    type: string;
+    tense: { [tense: string]: VerbConjugation };
+}
+  
+export interface VerbLibrary {
+    verbs: { [verbName: string]: VerbData };
+}
 export const verbLibrary = {
     verbs: {
         être: {
             type: 'irregular',
             tense: {
-                présent: {
+                Présent: {
                     je: 'suis',
                     tu: 'es',
                     'il/elle/on': 'est',
@@ -11,7 +23,7 @@ export const verbLibrary = {
                     vous: 'êtes',
                     'ils/elles': 'sont'
                 },
-                futur: {
+                "Futur simple": {
                     je: 'serai',
                     tu: 'seras',
                     'il/elle/on': 'sera',
@@ -19,7 +31,7 @@ export const verbLibrary = {
                     vous: 'serez',
                     'ils/elles': 'seront'
                 },
-                passé: {
+                "Passé simple": {
                     je: 'fus',
                     tu: 'fus',
                     'il/elle/on': 'fût',
@@ -27,7 +39,7 @@ export const verbLibrary = {
                     vous: 'fûtes',
                     'ils/elles': 'furent'
                 },
-                imparfait: {
+                Imparfait: {
                     'j\'': 'étais',
                     tu: 'étais',
                     'il/elle/on': 'était',
@@ -35,7 +47,7 @@ export const verbLibrary = {
                     vous: 'étiez',
                     'ils/elles': 'étaient'
                 },
-                conditionnelPrésent: {
+                "Conditionnel présent": {
                     je: 'serais',
                     tu: 'serais',
                     'il/elle/on': 'serait',
@@ -43,7 +55,7 @@ export const verbLibrary = {
                     vous: 'seriez',
                     'ils/elles': 'seraient'
                 },
-                subjonctifPrésent: {
+                "Subjonctif présent": {
                     'que je': 'sois',
                     'que tu': 'sois',
                     'q\'il/elle/on': 'soit',
@@ -51,7 +63,7 @@ export const verbLibrary = {
                     'que vous': 'soyez',
                     'qu\'ils/elles': 'soient'
                 },
-                futurProche: {
+                "Futur proche": {
                     je: 'vais être',
                     tu: 'vas être',
                     'il/elle/on': 'va être',
@@ -59,7 +71,7 @@ export const verbLibrary = {
                     vous: 'allez être',
                     'ils/elles': 'vont être'
                 },
-                passéComposé: {
+                "Passé composé": {
                     'j\'': 'ai été',
                     tu: 'as été',
                     'il/elle/on': 'a été',
@@ -72,7 +84,7 @@ export const verbLibrary = {
         avoir: {
             type: 'irregular',
             tense: {
-                présent: {
+                Présent: {
                     'j\'': 'ai',
                     tu: 'as',
                     'il/elle/on': 'a',
@@ -80,7 +92,7 @@ export const verbLibrary = {
                     vous: 'avez',
                     'ils/elles': 'ont'
                 },
-                futur: {
+                "Futur simple": {
                     'j\'': 'aurai',
                     tu: 'auras',
                     'il/elle/on': 'aura',
@@ -88,7 +100,7 @@ export const verbLibrary = {
                     vous: 'aurez',
                     'ils/elles': 'auront'
                 },
-                passé: {
+                "Passé simple": {
                     'j\'': 'eus',
                     tu: 'eus',
                     'il/elle/on': 'eut',
@@ -96,7 +108,7 @@ export const verbLibrary = {
                     vous: 'eûtes',
                     'ils/elles': 'aurent'
                 },
-                imparfait: {
+                Imparfait: {
                     'j\'': 'avais',
                     tu: 'avais',
                     'il/elle/on': 'avait',
@@ -104,7 +116,7 @@ export const verbLibrary = {
                     vous: 'aviez',
                     'ils/elles': 'avaient'
                 },
-                conditionnelPrésent: {
+                "Conditionnel présent": {
                     'j\'': 'aurais',
                     tu: 'aurais',
                     'il/elle/on': 'aurait',
@@ -112,7 +124,7 @@ export const verbLibrary = {
                     vous: 'auriez',
                     'ils/elles': 'auraient'
                 },
-                subjonctifPrésent: {
+                "Subjonctif présent": {
                     'que j\'': 'aie',
                     'que tu': 'aies',
                     'qu\'il/elle/on': 'ait',
@@ -120,7 +132,7 @@ export const verbLibrary = {
                     'que vous': 'ayez',
                     'qu\'ils/elles': 'aient'
                 },
-                futurProche: {
+                "Futur proche": {
                     je: 'vais avoir',
                     tu: 'vas avoir',
                     'il/elle/on': 'va avoir',
@@ -128,7 +140,7 @@ export const verbLibrary = {
                     vous: 'allez avoir',
                     'ils/elles': 'vont avoir'
                 },
-                passéComposé: {
+                "Passé composé": {
                     'j\'': 'ai eu',
                     tu: 'as eu',
                     'il/elle/on': 'a eu',
@@ -141,7 +153,7 @@ export const verbLibrary = {
         faire: {
             type: 'irregular',
             tense: {
-                présent: {
+                Présent: {
                     je: 'fais',
                     tu: 'fais',
                     'il/elle/on': 'fait',
@@ -149,7 +161,7 @@ export const verbLibrary = {
                     vous: 'faites',
                     'ils/elles': 'font'
                 },
-                futur: {
+                "Futur simple": {
                     je: 'ferai',
                     tu: 'feras',
                     'il/elle/on': 'fera',
@@ -157,7 +169,7 @@ export const verbLibrary = {
                     vous: 'ferez',
                     'ils/elles': 'feront'
                 },
-                passé: {
+                "Passé simple": {
                     je: 'fis',
                     tu: 'fis',
                     'il/elle/on': 'fit',
@@ -165,7 +177,7 @@ export const verbLibrary = {
                     vous: 'fîtes',
                     'ils/elles': 'firent'
                 },
-                imparfait: {
+                Imparfait: {
                     je: 'faisais',
                     tu: 'faisais',
                     'il/elle/on': 'faisait',
@@ -173,7 +185,7 @@ export const verbLibrary = {
                     vous: 'faisiez',
                     'ils/elles': 'faisaient'
                 },
-                conditionnelPrésent: {
+                "Conditionnel présent": {
                     je: 'ferais',
                     tu: 'ferais',
                     'il/elle/on': 'ferait',
@@ -181,7 +193,7 @@ export const verbLibrary = {
                     vous: 'feriez',
                     'ils/elles': 'feraient'
                 },
-                subjonctifPrésent: {
+                "Subjonctif présent": {
                     'que je': 'fasse',
                     'que tu': 'fasses',
                     'qu\'il/elle/on': 'fasse',
@@ -189,7 +201,7 @@ export const verbLibrary = {
                     'que vous': 'fassiez',
                     'qu\'ils/elles': 'fassent'
                 },
-                futurProche: {
+                "Futur proche": {
                     je: 'vais faire',
                     tu: 'vas faire',
                     'il/elle/on': 'va faire',
@@ -197,7 +209,7 @@ export const verbLibrary = {
                     vous: 'allez faire',
                     'ils/elles': 'vont faire'
                 },
-                passéComposé: {
+                "Passé composé": {
                     'j\'': 'ai fait',
                     tu: 'as fait',
                     'il/elle/on': 'a fait',
@@ -210,7 +222,7 @@ export const verbLibrary = {
         aller: {
             type: 'irregular',
             tense: {
-                présent: {
+                Présent: {
                     je: 'vais',
                     tu: 'vas',
                     'il/elle/on': 'va',
@@ -218,7 +230,7 @@ export const verbLibrary = {
                     vous: 'allez',
                     'ils/elles': 'vont'
                 },
-                futur: {
+                "Futur simple": {
                     'j\'': 'irai',
                     tu: 'iras',
                     'il/elle/on': 'ira',
@@ -226,7 +238,7 @@ export const verbLibrary = {
                     vous: 'irez',
                     'ils/elles': 'iront'
                 },
-                passé: {
+                "Passé simple": {
                     'j\'': 'allai',
                     tu: 'allas',
                     'il/elle/on': 'alla',
@@ -234,7 +246,7 @@ export const verbLibrary = {
                     vous: 'allâtes',
                     'ils/elles': 'allèrent'
                 },
-                imparfait: {
+                Imparfait: {
                     'j\'': 'allais',
                     tu: 'allais',
                     'il/elle/on': 'allait',
@@ -242,7 +254,7 @@ export const verbLibrary = {
                     vous: 'alliez',
                     'ils/elles': 'allaient'
                 },
-                conditionnelPrésent: {
+                "Conditionnel présent": {
                     'j\'': 'irais',
                     tu: 'irais',
                     'il/elle/on': 'irait',
@@ -250,7 +262,7 @@ export const verbLibrary = {
                     vous: 'iriez',
                     'ils/elles': 'iraient'
                 },
-                subjonctifPrésent: {
+                "Subjonctif présent": {
                     'que je': 'aille',
                     'que tu': 'ailles',
                     'qu\'il/elle/on': 'aille',
@@ -258,7 +270,7 @@ export const verbLibrary = {
                     'que vous': 'alliez',
                     'qu\'ils/elles': 'aillent'
                 },
-                futurProche: {
+                "Futur proche": {
                     je: 'vais aller',
                     tu: 'vas aller',
                     'il/elle/on': 'va aller',
@@ -266,7 +278,7 @@ export const verbLibrary = {
                     vous: 'allez aller',
                     'ils/elles': 'vont aller'
                 },
-                passéComposé: {
+                "Passé composé": {
                     'j\'': 'ai allé',
                     tu: 'as allé',
                     'il/elle/on': 'a allé',
@@ -279,28 +291,28 @@ export const verbLibrary = {
         falloir: {
             type: 'irregular',
             tense: {
-                présent: {
+                Présent: {
                     'il/elle/on': 'faut'
                     },
-                futur: {
+                "Futur simple": {
                     'il/elle/on': 'faudra'
                 },
-                passé: {
+                "Passé simple": {
                     'il/elle/on': 'fallut'
                 },
-                imparfait: {
+                Imparfait: {
                     'il/elle/on': 'fallait'
                 },
-                conditionnelPrésent: {
+                "Conditionnel présent": {
                     'il/elle/on': 'faudrait'
                 },
-                subjonctifPrésent: {
+                "Subjonctif présent": {
                     'qu\'il/elle/on': 'faille'
                 },
-                futurProche: {
+                "Futur proche": {
                     'il/elle/on': 'va falloir'
                 },
-                passéComposé: {
+                "Passé composé": {
                     'il/elle/on': 'a fallu'
                 }
             }
@@ -308,7 +320,7 @@ export const verbLibrary = {
         mettre: {
             type: 'irregular',
             tense: {
-                présent: {
+                Présent: {
                     je: 'mets',
                     tu: 'mets',
                     'il/elle/on': 'met',
@@ -316,7 +328,7 @@ export const verbLibrary = {
                     vous: 'mettez',
                     'ils/elles': 'mettent'
                 },
-                futur: {
+                "Futur simple": {
                     je: 'mettrai',
                     tu: 'mettras',
                     'il/elle/on': 'mettra',
@@ -324,7 +336,7 @@ export const verbLibrary = {
                     vous: 'mettrez',
                     'ils/elles': 'mettront'
                 },
-                passé: {
+                "Passé simple": {
                     je: 'mis',
                     tu: 'mis',
                     'il/elle/on': 'mit',
@@ -332,7 +344,7 @@ export const verbLibrary = {
                     vous: 'mîtes',
                     'ils/elles': 'mirent'
                 },
-                imparfait: {
+                Imparfait: {
                     je: 'mettais',
                     tu: 'mettais',
                     'il/elle/on': 'mettait',
@@ -340,7 +352,7 @@ export const verbLibrary = {
                     vous: 'mettiez',
                     'ils/elles': 'mattaient'
                 },
-                conditionnelPrésent: {
+                "Conditionnel présent": {
                     je: 'mettrais',
                     tu: 'mettrais',
                     'il/elle/on': 'mettrait',
@@ -348,7 +360,7 @@ export const verbLibrary = {
                     vous: 'mettriez',
                     'ils/elles': 'mettraient'
                 },
-                subjonctifPrésent: {
+                "Subjonctif présent": {
                     'que je': 'mette',
                     'que tu': 'mettes',
                     'qu\'il/elle/on': 'mette',
@@ -356,7 +368,7 @@ export const verbLibrary = {
                     'que vous': 'mettiez',
                     'qu\'ils/elles': 'mettent'
                 },
-                futurProche: {
+                "Futur proche": {
                     je: 'vais mettre',
                     tu: 'vas mettre',
                     'il/elle/on': 'va mettre',
@@ -364,7 +376,7 @@ export const verbLibrary = {
                     vous: 'allez mettre',
                     'ils/elles': 'vont mettre'
                 },
-                passéComposé: {
+                "Passé composé": {
                     'j\'': 'ai mis',
                     tu: 'as mis',
                     'il/elle/on': 'a mis',
@@ -377,7 +389,7 @@ export const verbLibrary = {
         vouloir: {
             type: 'irregular',
             tense: {
-                présent: {
+                Présent: {
                     je: 'veux',
                     tu: 'veux',
                     'il/elle/on': 'veut',
@@ -385,7 +397,7 @@ export const verbLibrary = {
                     vous: 'voulez',
                     'ils/elles': 'veulent'
                 },
-                futur: {
+                "Futur simple": {
                     je: 'voudrai',
                     tu: 'voudras',
                     'il/elle/on': 'voudra',
@@ -393,7 +405,7 @@ export const verbLibrary = {
                     vous: 'voudrez',
                     'ils/elles': 'voudront'
                 },
-                passé: {
+                "Passé simple": {
                     je: 'voulus',
                     tu: 'voulus',
                     'il/elle/on': 'voulut',
@@ -401,7 +413,7 @@ export const verbLibrary = {
                     vous: 'voulûtes',
                     'ils/elles': 'voulurent'
                 },
-                imparfait: {
+                Imparfait: {
                     je: 'voulais',
                     tu: 'voulais',
                     'il/elle/on': 'voulait',
@@ -409,7 +421,7 @@ export const verbLibrary = {
                     vous: 'vouliez',
                     'ils/elles': 'voulaient'
                 },
-                conditionnelPrésent: {
+                "Conditionnel présent": {
                     je: 'voudrais',
                     tu: 'voudrais',
                     'il/elle/on': 'voudrait',
@@ -417,7 +429,7 @@ export const verbLibrary = {
                     vous: 'voudriez',
                     'ils/elles': 'voudraient'
                 },
-                subjonctifPrésent: {
+                "Subjonctif présent": {
                     'que je': 'veuille',
                     'que tu': 'veuilles',
                     'qu\'il/elle/on': 'veuille',
@@ -425,7 +437,7 @@ export const verbLibrary = {
                     'que vous': 'vouliez',
                     'qu\'ils/elles': 'veuillent'
                 },
-                futurProche: {
+                "Futur proche": {
                     je: 'vais vouloir',
                     tu: 'vas vouloir',
                     'il/elle/on': 'va vouloir',
@@ -433,7 +445,7 @@ export const verbLibrary = {
                     vous: 'allez vouloir',
                     'ils/elles': 'vont vouloir'
                 },
-                passéComposé: {
+                "Passé composé": {
                     'j\'': 'ai voulu',
                     tu: 'as voulu',
                     'il/elle/on': 'a voulu',
@@ -446,7 +458,7 @@ export const verbLibrary = {
         pouvoir: {
             type: 'irregular',
             tense: {
-                présent: {
+                Présent: {
                     je: 'peux',
                     tu: 'peux',
                     'il/elle/on': 'peut',
@@ -454,7 +466,7 @@ export const verbLibrary = {
                     vous: 'pouvez',
                     'ils/elles': 'peuvent'
                 },
-                futur: {
+                "Futur simple": {
                     je: 'pourrai',
                     tu: 'pourras',
                     'il/elle/on': 'pourra',
@@ -462,7 +474,7 @@ export const verbLibrary = {
                     vous: 'pourrez',
                     'ils/elles': 'pourront'
                 },
-                passé: {
+                "Passé simple": {
                     je: 'pus',
                     tu: 'pus',
                     'il/elle/on': 'put',
@@ -470,7 +482,7 @@ export const verbLibrary = {
                     vous: 'pûtes',
                     'ils/elles': 'purent'
                 },
-                imparfait: {
+                Imparfait: {
                     je: 'pouvais',
                     tu: 'pouvais',
                     'il/elle/on': 'pouvait',
@@ -478,7 +490,7 @@ export const verbLibrary = {
                     vous: 'pouviez',
                     'ils/elles': 'pouvaient'
                 },
-                conditionnelPrésent: {
+                "Conditionnel présent": {
                     je: 'pourrais',
                     tu: 'pourrais',
                     'il/elle/on': 'pourrait',
@@ -486,7 +498,7 @@ export const verbLibrary = {
                     vous: 'pourriez',
                     'ils/elles': 'pourraient'
                 },
-                subjonctifPrésent: {
+                "Subjonctif présent": {
                     'que je': 'puisse',
                     'que tu': 'puisses',
                     'qu\'il/elle/on': 'puisse',
@@ -494,7 +506,7 @@ export const verbLibrary = {
                     'que vous': 'puissiez',
                     'qu\'ils/elles': 'puissent'
                 },
-                futurProche: {
+                "Futur proche": {
                     je: 'vais pouvoir',
                     tu: 'vas pouvoir',
                     'il/elle/on': 'va pouvoir',
@@ -502,7 +514,7 @@ export const verbLibrary = {
                     vous: 'allez pouvoir',
                     'ils/elles': 'vont pouvoir'
                 },
-                passéComposé: {
+                "Passé composé": {
                     'j\'': 'ai pu',
                     tu: 'as pu',
                     'il/elle/on': 'a pu',
@@ -515,7 +527,7 @@ export const verbLibrary = {
         devoir: {
             type: 'irregular',
             tense: {
-                présent: {
+                Présent: {
                     je: 'dois',
                     tu: 'dois',
                     'il/elle/on': 'doit',
@@ -523,7 +535,7 @@ export const verbLibrary = {
                     vous: 'devez',
                     'ils/elles': 'doivent'
                 },
-                futur: {
+                "Futur simple": {
                     je: 'devrai',
                     tu: 'devras',
                     'il/elle/on': 'devra',
@@ -531,7 +543,7 @@ export const verbLibrary = {
                     vous: 'devrez',
                     'ils/elles': 'devront'
                 },
-                passé: {
+                "Passé simple": {
                     je: 'dus',
                     tu: 'dus',
                     'il/elle/on': 'dut',
@@ -539,7 +551,7 @@ export const verbLibrary = {
                     vous: 'dûtes',
                     'ils/elles': 'durent'
                 },
-                imparfait: {
+                Imparfait: {
                     je: 'devais',
                     tu: 'devais',
                     'il/elle/on': 'devait',
@@ -547,7 +559,7 @@ export const verbLibrary = {
                     vous: 'deviez',
                     'ils/elles': 'devaient'
                 },
-                conditionnelPrésent: {
+                "Conditionnel présent": {
                     je: 'devrais',
                     tu: 'devrais',
                     'il/elle/on': 'devrait',
@@ -555,7 +567,7 @@ export const verbLibrary = {
                     vous: 'devriez',
                     'ils/elles': 'devraient'
                 },
-                subjonctifPrésent: {
+                "Subjonctif présent": {
                     'que je': 'doive',
                     'que tu': 'doives',
                     'qu\'il/elle/on': 'doive',
@@ -563,7 +575,7 @@ export const verbLibrary = {
                     'que vous': 'deviez',
                     'qu\'ils/elles': 'doivent'
                 },
-                futurProche: {
+                "Futur proche": {
                     je: 'vais devoir',
                     tu: 'vas devoir',
                     'il/elle/on': 'va devoir',
@@ -571,7 +583,7 @@ export const verbLibrary = {
                     vous: 'allez devoir',
                     'ils/elles': 'vont devoir'
                 },
-                passéComposé: {
+                "Passé composé": {
                     'j\'': 'ai dû',
                     tu: 'as dû',
                     'il/elle/on': 'a dû',
@@ -584,7 +596,7 @@ export const verbLibrary = {
         dire: {
             type: 'irregular',
             tense: {
-                présent: {
+                Présent: {
                     je: 'dis',
                     tu: 'dis',
                     'il/elle/on': 'dit',
@@ -592,7 +604,7 @@ export const verbLibrary = {
                     vous: 'dites',
                     'ils/elles': 'disent'
                 },
-                futur: {
+                "Futur simple": {
                     je: 'dirai',
                     tu: 'diras',
                     'il/elle/on': 'dira',
@@ -600,7 +612,7 @@ export const verbLibrary = {
                     vous: 'direz',
                     'ils/elles': 'diront'
                 },
-                passé: {
+                "Passé simple": {
                     je: 'dis',
                     tu: 'dis',
                     'il/elle/on': 'dit',
@@ -608,7 +620,7 @@ export const verbLibrary = {
                     vous: 'dîtes',
                     'ils/elles': 'dirent'
                 },
-                imparfait: {
+                Imparfait: {
                     je: 'disais',
                     tu: 'disais',
                     'il/elle/on': 'disait',
@@ -616,7 +628,7 @@ export const verbLibrary = {
                     vous: 'disiez',
                     'ils/elles': 'disaient'
                 },
-                conditionnelPrésent: {
+                "Conditionnel présent": {
                     je: 'dirais',
                     tu: 'dirais',
                     'il/elle/on': 'dirait',
@@ -624,7 +636,7 @@ export const verbLibrary = {
                     vous: 'diriez',
                     'ils/elles': 'diraient'
                 },
-                subjonctifPrésent: {
+                "Subjonctif présent": {
                     'que je': 'dise',
                     'que tu': 'dises',
                     'qu\'il/elle/on': 'dise',
@@ -632,7 +644,7 @@ export const verbLibrary = {
                     'que vous': 'disiez',
                     'qu\'ils/elles': 'disent'
                 },
-                futurProche: {
+                "Futur proche": {
                     je: 'vais dire',
                     tu: 'vas dire',
                     'il/elle/on': 'va dire',
@@ -640,7 +652,7 @@ export const verbLibrary = {
                     vous: 'allez dire',
                     'ils/elles': 'vont dire'
                 },
-                passéComposé: {
+                "Passé composé": {
                     'j\'': 'ai dit',
                     tu: 'as dit',
                     'il/elle/on': 'a dit',
@@ -653,7 +665,7 @@ export const verbLibrary = {
         comprendre: {
             type: 'irregular',
             tense: {
-                présent: {
+                Présent: {
                     je: 'comprends',
                     tu: 'comprends',
                     'il/elle/on': 'comprend',
@@ -661,7 +673,7 @@ export const verbLibrary = {
                     vous: 'comprenez',
                     'ils/elles': 'comprennent'
                 },
-                futur: {
+                "Futur simple": {
                     je: 'comprendrai',
                     tu: 'comprendras',
                     'il/elle/on': 'comprendra',
@@ -669,7 +681,7 @@ export const verbLibrary = {
                     vous: 'comprendrez',
                     'ils/elles': 'comprendront'
                 },
-                passé: {
+                "Passé simple": {
                     je: 'compris',
                     tu: 'compris',
                     'il/elle/on': 'comprit',
@@ -677,7 +689,7 @@ export const verbLibrary = {
                     vous: 'comprîtes',
                     'ils/elles': 'comprirent'
                 },
-                imparfait: {
+                Imparfait: {
                     je: 'comprenais',
                     tu: 'comprenais',
                     'il/elle/on': 'comprenait',
@@ -685,7 +697,7 @@ export const verbLibrary = {
                     vous: 'compreniez',
                     'ils/elles': 'comprenaient'
                 },
-                conditionnelPrésent: {
+                "Conditionnel présent": {
                     je: 'comprendrais',
                     tu: 'comprendrais',
                     'il/elle/on': 'comprendrait',
@@ -693,7 +705,7 @@ export const verbLibrary = {
                     vous: 'comprendriez',
                     'ils/elles': 'comprendraient'
                 },
-                subjonctifPrésent: {
+                "Subjonctif présent": {
                     'que je': 'comprenne',
                     'que tu': 'comprennes',
                     'qu\'il/elle/on': 'comprenne',
@@ -701,7 +713,7 @@ export const verbLibrary = {
                     'que vous': 'compreniez',
                     'qu\'ils/elles': 'comprennent'
                 },
-                futurProche: {
+                "Futur proche": {
                     je: 'vais comprendre',
                     tu: 'vas comprendre',
                     'il/elle/on': 'va comprendre',
@@ -709,7 +721,7 @@ export const verbLibrary = {
                     vous: 'allez comprendre',
                     'ils/elles': 'vont comprendre'
                 },
-                passéComposé: {
+                "Passé composé": {
                     'j\'': 'ai compris',
                     tu: 'as compris',
                     'il/elle/on': 'a compris',
@@ -722,7 +734,7 @@ export const verbLibrary = {
         croire: {
             type: 'irregular',
             tense: {
-                présent: {
+                Présent: {
                     je: 'crois',
                     tu: 'crois',
                     'il/elle/on': 'croit',
@@ -730,7 +742,7 @@ export const verbLibrary = {
                     vous: 'croyez',
                     'ils/elles': 'croient'
                 },
-                futur: {
+                "Futur simple": {
                     je: 'croirai',
                     tu: 'croiras',
                     'il/elle/on': 'croira',
@@ -738,7 +750,7 @@ export const verbLibrary = {
                     vous: 'croirez',
                     'ils/elles': 'croiront'
                 },
-                passé: {
+                "Passé simple": {
                     je: 'crus',
                     tu: 'crus',
                     'il/elle/on': 'crut',
@@ -746,7 +758,7 @@ export const verbLibrary = {
                     vous: 'crûtes',
                     'ils/elles': 'crurent'
                 },
-                imparfait: {
+                Imparfait: {
                     je: 'croyais',
                     tu: 'croyais',
                     'il/elle/on': 'croyait',
@@ -754,7 +766,7 @@ export const verbLibrary = {
                     vous: 'croyiez',
                     'ils/elles': 'croyaient'
                 },
-                conditionnelPrésent: {
+                "Conditionnel présent": {
                     je: 'croirais',
                     tu: 'croirais',
                     'il/elle/on': 'croirait',
@@ -762,7 +774,7 @@ export const verbLibrary = {
                     vous: 'croiriez',
                     'ils/elles': 'croiraient'
                 },
-                subjonctifPrésent: {
+                "Subjonctif présent": {
                     'que je': 'croie',
                     'que tu': 'croies',
                     'qu\'il/elle/on': 'croie',
@@ -770,7 +782,7 @@ export const verbLibrary = {
                     'que vous': 'croyiez',
                     'qu\'ils/elles': 'croient'
                 },
-                futurProche: {
+                "Futur proche": {
                     je: 'vais croire',
                     tu: 'vas croire',
                     'il/elle/on': 'va croire',
@@ -778,7 +790,7 @@ export const verbLibrary = {
                     vous: 'allez croire',
                     'ils/elles': 'vont croire'
                 },
-                passéComposé: {
+                "Passé composé": {
                     'j\'': 'ai cru',
                     tu: 'as cru',
                     'il/elle/on': 'a cru',
@@ -791,7 +803,7 @@ export const verbLibrary = {
         parler: {
             type: 'regular',
             tense: {
-                présent: {
+                Présent: {
                     je: 'parle',
                     tu: 'parles',
                     'il/elle/on': 'parle',
@@ -799,7 +811,7 @@ export const verbLibrary = {
                     vous: 'parlez',
                     'ils/elles': 'parlent'
                 },
-                futur: {
+                "Futur simple": {
                     je: 'parlerai',
                     tu: 'parleras',
                     'il/elle/on': 'parlera',
@@ -807,7 +819,7 @@ export const verbLibrary = {
                     vous: 'parlerez',
                     'ils/elles': 'parleront'
                 },
-                passé: {
+                "Passé simple": {
                     je: 'parlai',
                     tu: 'parlas',
                     'il/elle/on': 'parla',
@@ -815,7 +827,7 @@ export const verbLibrary = {
                     vous: 'parlâtes',
                     'ils/elles': 'parlèrent'
                 },
-                imparfait: {
+                Imparfait: {
                     je: 'parlais',
                     tu: 'parlais',
                     'il/elle/on': 'parlait',
@@ -823,7 +835,7 @@ export const verbLibrary = {
                     vous: 'parliez',
                     'ils/elles': 'parlaient'
                 },
-                conditionnelPrésent: {
+                "Conditionnel présent": {
                     je: 'parlerais',
                     tu: 'parlerais',
                     'il/elle/on': 'parlerait',
@@ -831,7 +843,7 @@ export const verbLibrary = {
                     vous: 'parleriez',
                     'ils/elles': 'parlaient'
                 },
-                subjonctifPrésent: {
+                "Subjonctif présent": {
                     'que je': 'parle',
                     'que tu': 'parles',
                     'qu\'il/elle/on': 'parle',
@@ -839,7 +851,7 @@ export const verbLibrary = {
                     'que vous': 'parliez',
                     'qu\'ils/elles': 'parlent'
                 },
-                futurProche: {
+                "Futur proche": {
                     je: 'vais parler',
                     tu: 'vas parler',
                     'il/elle/on': 'va parler',
@@ -847,7 +859,7 @@ export const verbLibrary = {
                     vous: 'allez parler',
                     'ils/elles': 'vont parler'
                 },
-                passéComposé: {
+                "Passé composé": {
                     'j\'': 'ai parlé',
                     tu: 'as parlé',
                     'il/elle/on': 'a parlé',
@@ -860,7 +872,7 @@ export const verbLibrary = {
         prendre: {
             type: 'irregular',
             tense: {
-                présent: {
+                Présent: {
                     je: 'prends',
                     tu: 'prends',
                     'il/elle/on': 'prend',
@@ -868,7 +880,7 @@ export const verbLibrary = {
                     vous: 'prenez',
                     'ils/elles': 'prennent'
                 },
-                futur: {
+                "Futur simple": {
                     je: 'prendrai',
                     tu: 'prendras',
                     'il/elle/on': 'prenda',
@@ -876,7 +888,7 @@ export const verbLibrary = {
                     vous: 'prendrez',
                     'ils/elles': 'prendront'
                 },
-                passé: {
+                "Passé simple": {
                     je: 'pris',
                     tu: 'pris',
                     'il/elle/on': 'prit',
@@ -884,7 +896,7 @@ export const verbLibrary = {
                     vous: 'prîtes',
                     'ils/elles': 'prirent'
                 },
-                imparfait: {
+                Imparfait: {
                     je: 'prenais',
                     tu: 'prenais',
                     'il/elle/on': 'prenait',
@@ -892,7 +904,7 @@ export const verbLibrary = {
                     vous: 'preniez',
                     'ils/elles': 'prenaient'
                 },
-                conditionnelPrésent: {
+                "Conditionnel présent": {
                     je: 'prendrais',
                     tu: 'prendrais',
                     'il/elle/on': 'prendrait',
@@ -900,7 +912,7 @@ export const verbLibrary = {
                     vous: 'prendriez',
                     'ils/elles': 'prendraient'
                 },
-                subjonctifPrésent: {
+                "Subjonctif présent": {
                     'que je': 'prenne',
                     'que tu': 'prennes',
                     'qu\'il/elle/on': 'prenne',
@@ -908,7 +920,7 @@ export const verbLibrary = {
                     'que vous': 'preniez',
                     'qu\'ils/elles': 'prennent'
                 },
-                futurProche: {
+                "Futur proche": {
                     je: 'vais prendre',
                     tu: 'vas prendre',
                     'il/elle/on': 'va prendre',
@@ -916,7 +928,7 @@ export const verbLibrary = {
                     vous: 'allez prendre',
                     'ils/elles': 'vont prendre'
                 },
-                passéComposé: {
+                "Passé composé": {
                     'j\'': 'ai pris',
                     tu: 'as pris',
                     'il/elle/on': 'a pris',
@@ -929,7 +941,7 @@ export const verbLibrary = {
         venir: {
             type: 'irregular',
             tense: {
-                présent: {
+                Présent: {
                     je: 'viens',
                     tu: 'viens',
                     'il/elle/on': 'vient',
@@ -937,7 +949,7 @@ export const verbLibrary = {
                     vous: 'venez',
                     'ils/elles': 'viennent'
                 },
-                futur: {
+                "Futur simple": {
                     je: 'viendrai',
                     tu: 'viendras',
                     'il/elle/on': 'viendra',
@@ -945,7 +957,7 @@ export const verbLibrary = {
                     vous: 'viendrez',
                     'ils/elles': 'viendront'
                 },
-                passé: {
+                "Passé simple": {
                     je: 'vins',
                     tu: 'vins',
                     'il/elle/on': 'vint',
@@ -953,7 +965,7 @@ export const verbLibrary = {
                     vous: 'vîntes',
                     'ils/elles': 'vinrent'
                 },
-                imparfait: {
+                Imparfait: {
                     je: 'venais',
                     tu: 'venais',
                     'il/elle/on': 'venait',
@@ -961,7 +973,7 @@ export const verbLibrary = {
                     vous: 'veniez',
                     'ils/elles': 'venaient'
                 },
-                conditionnelPrésent: {
+                "Conditionnel présent": {
                     je: 'viendrais',
                     tu: 'viendrais',
                     'il/elle/on': 'viendrait',
@@ -969,7 +981,7 @@ export const verbLibrary = {
                     vous: 'viendriez',
                     'ils/elles': 'viendraient'
                 },
-                subjonctifPrésent: {
+                "Subjonctif présent": {
                     'que je': 'vienne',
                     'que tu': 'viennes',
                     'qu\'il/elle/on': 'vienne',
@@ -977,7 +989,7 @@ export const verbLibrary = {
                     'que vous': 'vieniez',
                     'qu\'ils/elles': 'viennent'
                 },
-                futurProche: {
+                "Futur proche": {
                     je: 'vais venir',
                     tu: 'vas venir',
                     'il/elle/on': 'va venir',
@@ -985,7 +997,7 @@ export const verbLibrary = {
                     vous: 'allez venir',
                     'ils/elles': 'vont venir'
                 },
-                passéComposé: {
+                "Passé composé": {
                     'j\'': 'ai venu',
                     tu: 'as venu',
                     'il/elle/on': 'a venu',
@@ -998,7 +1010,7 @@ export const verbLibrary = {
         tenir: {
             type: 'irregular',
             tense: {
-                présent: {
+                Présent: {
                     je: 'tiens',
                     tu: 'tiens',
                     'il/elle/on': 'tient',
@@ -1006,7 +1018,7 @@ export const verbLibrary = {
                     vous: 'tenez',
                     'ils/elles': 'tiennent'
                 },
-                futur: {
+                "Futur simple": {
                     je: 'tiendrai',
                     tu: 'tiendras',
                     'il/elle/on': 'tiendra',
@@ -1014,7 +1026,7 @@ export const verbLibrary = {
                     vous: 'tiendrez',
                     'ils/elles': 'tiendront'
                 },
-                passé: {
+                "Passé simple": {
                     je: 'tins',
                     tu: 'tins',
                     'il/elle/on': 'tint',
@@ -1022,7 +1034,7 @@ export const verbLibrary = {
                     vous: 'tîntes',
                     'ils/elles': 'tinrent'
                 },
-                imparfait: {
+                Imparfait: {
                     je: 'tenais',
                     tu: 'tenais',
                     'il/elle/on': 'tenait',
@@ -1030,7 +1042,7 @@ export const verbLibrary = {
                     vous: 'teniez',
                     'ils/elles': 'tenaient'
                 },
-                conditionnelPrésent: {
+                "Conditionnel présent": {
                     je: 'tiendrais',
                     tu: 'tiendrais',
                     'il/elle/on': 'tiendrait',
@@ -1038,7 +1050,7 @@ export const verbLibrary = {
                     vous: 'tiendriez',
                     'ils/elles': 'tiendraient'
                 },
-                subjonctifPrésent: {
+                "Subjonctif présent": {
                     'que je': 'tienne',
                     'que tu': 'tiennes',
                     'qu\'il/elle/on': 'tienne',
@@ -1046,7 +1058,7 @@ export const verbLibrary = {
                     'que vous': 'teniez',
                     'qu\'ils/elles': 'tiennent'
                 },
-                futurProche: {
+                "Futur proche": {
                     je: 'vais tenir',
                     tu: 'vas tenir',
                     'il/elle/on': 'va tenir',
@@ -1054,7 +1066,7 @@ export const verbLibrary = {
                     vous: 'allez tenir',
                     'ils/elles': 'vont tenir'
                 },
-                passéComposé: {
+                "Passé composé": {
                     'j\'': 'ai tenu',
                     tu: 'as tenu',
                     'il/elle/on': 'a tenu',
@@ -1067,7 +1079,7 @@ export const verbLibrary = {
         savoir: {
             type: 'irregular',
             tense: {
-                présent: {
+                Présent: {
                     je: 'sais',
                     tu: 'sais',
                     'il/elle/on': 'sait',
@@ -1075,7 +1087,7 @@ export const verbLibrary = {
                     vous: 'savez',
                     'ils/elles': 'savent'
                 },
-                futur: {
+                "Futur simple": {
                     je: 'saurai',
                     tu: 'sauras',
                     'il/elle/on': 'saura',
@@ -1083,7 +1095,7 @@ export const verbLibrary = {
                     vous: 'saurez',
                     'ils/elles': 'saurez'
                 },
-                passé: {
+                "Passé simple": {
                     je: 'sus',
                     tu: 'sus',
                     'il/elle/on': 'sut',
@@ -1091,7 +1103,7 @@ export const verbLibrary = {
                     vous: 'sûtes',
                     'ils/elles': 'surent'
                 },
-                imparfait: {
+                Imparfait: {
                     je: 'saurai',
                     tu: 'sauras',
                     'il/elle/on': 'saura',
@@ -1099,7 +1111,7 @@ export const verbLibrary = {
                     vous: 'saurez',
                     'ils/elles': 'sauront'
                 },
-                conditionnelPrésent: {
+                "Conditionnel présent": {
                     je: 'saurais',
                     tu: 'saurais',
                     'il/elle/on': 'saurait',
@@ -1107,7 +1119,7 @@ export const verbLibrary = {
                     vous: 'sauriez',
                     'ils/elles': 'sauraient'
                 },
-                subjonctifPrésent: {
+                "Subjonctif présent": {
                     'que je': 'sache',
                     'que tu': 'saches',
                     'qu\'il/elle/on': 'sache',
@@ -1115,7 +1127,7 @@ export const verbLibrary = {
                     'que vous': 'sachiez',
                     'qu\'ils/elles': 'sachent'
                 },
-                futurProche: {
+                "Futur proche": {
                     je: 'vais savoir',
                     tu: 'vas savoir',
                     'il/elle/on': 'va savoir',
@@ -1123,7 +1135,7 @@ export const verbLibrary = {
                     vous: 'allez savoir',
                     'ils/elles': 'vont savoir'
                 },
-                passéComposé: {
+                "Passé composé": {
                     'j\'': 'ai su',
                     tu: 'as su',
                     'il/elle/on': 'a su',
@@ -1136,7 +1148,7 @@ export const verbLibrary = {
         aimer: {
             type: 'regular',
             tense: {
-                présent: {
+                Présent: {
                     'j\'': 'aime',
                     tu: 'aimes',
                     'il/elle/on': 'aime',
@@ -1144,7 +1156,7 @@ export const verbLibrary = {
                     vous: 'aimez',
                     'ils/elles': 'aiment'
                 },
-                futur: {
+                "Futur simple": {
                     'j\'': 'aimerai',
                     tu: 'aimeras',
                     'il/elle/on': 'aimera',
@@ -1152,7 +1164,7 @@ export const verbLibrary = {
                     vous: 'aimerez',
                     'ils/elles': 'aimeront'
                 },
-                passé: {
+                "Passé simple": {
                     'j\'': 'aimai',
                     tu: 'aimas',
                     'il/elle/on': 'aima',
@@ -1160,7 +1172,7 @@ export const verbLibrary = {
                     vous: 'aimâtes',
                     'ils/elles': 'aimèrent'
                 },
-                imparfait: {
+                Imparfait: {
                     'j\'': 'aimais',
                     tu: 'aimais',
                     'il/elle/on': 'aimait',
@@ -1168,7 +1180,7 @@ export const verbLibrary = {
                     vous: 'aimiez',
                     'ils/elles': 'aimaient'
                 },
-                conditionnelPrésent: {
+                "Conditionnel présent": {
                     'j\'': 'aimerais',
                     tu: 'aimerais',
                     'il/elle/on': 'aimerait',
@@ -1176,7 +1188,7 @@ export const verbLibrary = {
                     vous: 'aimeriez',
                     'ils/elles': 'aimeraient'
                 },
-                subjonctifPrésent: {
+                "Subjonctif présent": {
                     'que je': 'aime',
                     'que tu': 'aimes',
                     'qu\'il/elle/on': 'aime',
@@ -1184,7 +1196,7 @@ export const verbLibrary = {
                     'que vous': 'aimiez',
                     'qu\'ils/elles': 'aiment'
                 },
-                futurProche: {
+                "Futur proche": {
                     je: 'vais aimer',
                     tu: 'vas aimer',
                     'il/elle/on': 'va aimer',
@@ -1192,7 +1204,7 @@ export const verbLibrary = {
                     vous: 'allez aimer',
                     'ils/elles': 'vont aimer'
                 },
-                passéComposé: {
+                "Passé composé": {
                     'j\'': 'ai aimé',
                     tu: 'as aimé',
                     'il/elle/on': 'a aimé',
@@ -1205,7 +1217,7 @@ export const verbLibrary = {
         donner: {
             type: 'regular',
             tense: {
-                présent: {
+                Présent: {
                     je: 'donne',
                     tu: 'donnes',
                     'il/elle/on': 'donne',
@@ -1213,7 +1225,7 @@ export const verbLibrary = {
                     vous: 'donnez',
                     'ils/elles': 'donnent'
                 },
-                futur: {
+                "Futur simple": {
                     je: 'donnerai',
                     tu: 'donneras',
                     'il/elle/on': 'donnera',
@@ -1221,7 +1233,7 @@ export const verbLibrary = {
                     vous: 'donnerez',
                     'ils/elles': 'donneront'
                 },
-                passé: {
+                "Passé simple": {
                     je: 'donnai',
                     tu: 'donnas',
                     'il/elle/on': 'donna',
@@ -1229,7 +1241,7 @@ export const verbLibrary = {
                     vous: 'donnâtes',
                     'ils/elles': 'donnèrent'
                 },
-                imparfait: {
+                Imparfait: {
                     je: 'donnais',
                     tu: 'donnais',
                     'il/elle/on': 'donnait',
@@ -1237,7 +1249,7 @@ export const verbLibrary = {
                     vous: 'donniez',
                     'ils/elles': 'donnaient'
                 },
-                conditionnelPrésent: {
+                "Conditionnel présent": {
                     je: 'donnerais',
                     tu: 'donnerais',
                     'il/elle/on': 'donnerait',
@@ -1245,7 +1257,7 @@ export const verbLibrary = {
                     vous: 'donneriez',
                     'ils/elles': 'donneraient'
                 },
-                subjonctifPrésent: {
+                "Subjonctif présent": {
                     'que je': 'donne',
                     'que tu': 'donnes',
                     'qu\'il/elle/on': 'donne',
@@ -1253,7 +1265,7 @@ export const verbLibrary = {
                     'que vous': 'donniez',
                     'qu\'ils/elles': 'donnent'
                 },
-                futurProche: {
+                "Futur proche": {
                     je: 'vais donner',
                     tu: 'vas donner',
                     'il/elle/on': 'va donner',
@@ -1261,7 +1273,7 @@ export const verbLibrary = {
                     vous: 'allez donner',
                     'ils/elles': 'vont donner'
                 },
-                passéComposé: {
+                "Passé composé": {
                     'j\'': 'ai donné',
                     tu: 'as donné',
                     'il/elle/on': 'a donné',
@@ -1274,7 +1286,7 @@ export const verbLibrary = {
         demander: {
             type: 'regular',
             tense: {
-                présent: {
+                Présent: {
                     je: 'demande',
                     tu: 'demandes',
                     'il/elle/on': 'demande',
@@ -1282,7 +1294,7 @@ export const verbLibrary = {
                     vous: 'demandez',
                     'ils/elles': 'demandent'
                 },
-                futur: {
+                "Futur simple": {
                     je: 'demanderai',
                     tu: 'demanderas',
                     'il/elle/on': 'demandera',
@@ -1290,7 +1302,7 @@ export const verbLibrary = {
                     vous: 'demanderez',
                     'ils/elles': 'demanderont'
                 },
-                passé: {
+                "Passé simple": {
                     je: 'demandai',
                     tu: 'demandas',
                     'il/elle/on': 'demandera',
@@ -1298,7 +1310,7 @@ export const verbLibrary = {
                     vous: 'demanderez',
                     'ils/elles': 'demanderont'
                 },
-                imparfait: {
+                Imparfait: {
                     je: 'demandais',
                     tu: 'demandais',
                     'il/elle/on': 'demandait',
@@ -1306,7 +1318,7 @@ export const verbLibrary = {
                     vous: 'demandiez',
                     'ils/elles': 'demandaient'
                 },
-                conditionnelPrésent: {
+                "Conditionnel présent": {
                     je: 'demanderais',
                     tu: 'demanderais',
                     'il/elle/on': 'demanderait',
@@ -1314,7 +1326,7 @@ export const verbLibrary = {
                     vous: 'demanderiez',
                     'ils/elles': 'demanderaient'
                 },
-                subjonctifPrésent: {
+                "Subjonctif présent": {
                     'que je': 'demande',
                     'que tu': 'demandes',
                     'qu\'il/elle/on': 'demande',
@@ -1322,7 +1334,7 @@ export const verbLibrary = {
                     'que vous': 'demandiez',
                     'qu\'ils/elles': 'demandent'
                 },
-                futurProche: {
+                "Futur proche": {
                     je: 'vais demander',
                     tu: 'vas demander',
                     'il/elle/on': 'va demander',
@@ -1330,7 +1342,7 @@ export const verbLibrary = {
                     vous: 'allez demander',
                     'ils/elles': 'vont demander'
                 },
-                passéComposé: {
+                "Passé composé": {
                     'j\'': 'ai demandé',
                     tu: 'as demandé',
                     'il/elle/on': 'a demandé',
@@ -1343,7 +1355,7 @@ export const verbLibrary = {
         passer: {
             type: 'regular',
             tense: {
-                présent: {
+                Présent: {
                     je: 'passe',
                     tu: 'passes',
                     'il/elle/on': 'passe',
@@ -1351,7 +1363,7 @@ export const verbLibrary = {
                     vous: 'passez',
                     'ils/elles': 'passent'
                 },
-                futur: {
+                "Futur simple": {
                     je: 'passerai',
                     tu: 'passeras',
                     'il/elle/on': 'passera',
@@ -1359,7 +1371,7 @@ export const verbLibrary = {
                     vous: 'passerez',
                     'ils/elles': 'passeront'
                 },
-                passé: {
+                "Passé simple": {
                     je: 'passai',
                     tu: 'passas',
                     'il/elle/on': 'passa',
@@ -1367,7 +1379,7 @@ export const verbLibrary = {
                     vous: 'passâtes',
                     'ils/elles': 'passèrent'
                 },
-                imparfait: {
+                Imparfait: {
                     je: 'passais',
                     tu: 'passais',
                     'il/elle/on': 'passait',
@@ -1375,7 +1387,7 @@ export const verbLibrary = {
                     vous: 'passiez',
                     'ils/elles': 'passaient'
                 },
-                conditionnelPrésent: {
+                "Conditionnel présent": {
                     je: 'passerais',
                     tu: 'passerais',
                     'il/elle/on': 'apasserait',
@@ -1383,7 +1395,7 @@ export const verbLibrary = {
                     vous: 'passeriez',
                     'ils/elles': 'passeraient'
                 },
-                subjonctifPrésent: {
+                "Subjonctif présent": {
                     'que je': 'passe',
                     'que tu': 'passes',
                     'qu\'il/elle/on': 'passe',
@@ -1391,7 +1403,7 @@ export const verbLibrary = {
                     'que vous': 'passiez',
                     'qu\'ils/elles': 'passent'
                 },
-                futurProche: {
+                "Futur proche": {
                     je: 'vais passer',
                     tu: 'vas passer',
                     'il/elle/on': 'va passer',
@@ -1399,7 +1411,7 @@ export const verbLibrary = {
                     vous: 'allez passer',
                     'ils/elles': 'vont passer'
                 },
-                passéComposé: {
+                "Passé composé": {
                     'j\'': 'ai passé',
                     tu: 'as passé',
                     'il/elle/on': 'a passé',
@@ -1412,7 +1424,7 @@ export const verbLibrary = {
         rester: {
             type: 'regular',
             tense: {
-                présent: {
+                Présent: {
                     je: 'reste',
                     tu: 'restes',
                     'il/elle/on': 'reste',
@@ -1420,7 +1432,7 @@ export const verbLibrary = {
                     vous: 'restez',
                     'ils/elles': 'restent'
                 },
-                futur: {
+                "Futur simple": {
                     je: 'resterai',
                     tu: 'resteras',
                     'il/elle/on': 'restera',
@@ -1428,7 +1440,7 @@ export const verbLibrary = {
                     vous: 'resterez',
                     'ils/elles': 'resteront'
                 },
-                passé: {
+                "Passé simple": {
                     je: 'restai',
                     tu: 'restas',
                     'il/elle/on': 'resta',
@@ -1436,7 +1448,7 @@ export const verbLibrary = {
                     vous: 'restâtes',
                     'ils/elles': 'restèrent'
                 },
-                imparfait: {
+                Imparfait: {
                     je: 'restais',
                     tu: 'restais',
                     'il/elle/on': 'restait',
@@ -1444,7 +1456,7 @@ export const verbLibrary = {
                     vous: 'restiez',
                     'ils/elles': 'restaient'
                 },
-                conditionnelPrésent: {
+                "Conditionnel présent": {
                     je: 'resterais',
                     tu: 'resterais',
                     'il/elle/on': 'resterait',
@@ -1452,7 +1464,7 @@ export const verbLibrary = {
                     vous: 'resteriez',
                     'ils/elles': 'resteraient'
                 },
-                subjonctifPrésent: {
+                "Subjonctif présent": {
                     'que je': 'reste',
                     'que tu': 'restes',
                     'qu\'il/elle/on': 'reste',
@@ -1460,7 +1472,7 @@ export const verbLibrary = {
                     'que vous': 'restiez',
                     'qu\'ils/elles': 'restent'
                 },
-                futurProche: {
+                "Futur proche": {
                     je: 'vais rester',
                     tu: 'vas rester',
                     'il/elle/on': 'va rester',
@@ -1468,7 +1480,7 @@ export const verbLibrary = {
                     vous: 'allez rester',
                     'ils/elles': 'vont rester'
                 },
-                passéComposé: {
+                "Passé composé": {
                     'j\'': 'ai resté',
                     tu: 'as resté',
                     'il/elle/on': 'a resté',
@@ -1481,7 +1493,7 @@ export const verbLibrary = {
         arriver: {
             type: 'regular',
             tense: {
-                présent: {
+                Présent: {
                     'j\'': 'arrive',
                     tu: 'arrives',
                     'il/elle/on': 'arrive',
@@ -1489,7 +1501,7 @@ export const verbLibrary = {
                     vous: 'arrivez',
                     'ils/elles': 'arrivent'
                 },
-                futur: {
+                "Futur simple": {
                     'j\'': 'arriverai',
                     tu: 'arriveras',
                     'il/elle/on': 'arrivera',
@@ -1497,7 +1509,7 @@ export const verbLibrary = {
                     vous: 'arriverez',
                     'ils/elles': 'arriveront'
                 },
-                passé: {
+                "Passé simple": {
                     'j\'': 'arrivai',
                     tu: 'arrivas',
                     'il/elle/on': 'arriva',
@@ -1505,7 +1517,7 @@ export const verbLibrary = {
                     vous: 'arrivâtes',
                     'ils/elles': 'arrivèrent'
                 },
-                imparfait: {
+                Imparfait: {
                     'j\'': 'arrivais',
                     tu: 'arrivais',
                     'il/elle/on': 'arrivait',
@@ -1513,7 +1525,7 @@ export const verbLibrary = {
                     vous: 'arriviez',
                     'ils/elles': 'arrivaient'
                 },
-                conditionnelPrésent: {
+                "Conditionnel présent": {
                     'j\'': 'arriverais',
                     tu: 'arriverais',
                     'il/elle/on': 'arriverait',
@@ -1521,7 +1533,7 @@ export const verbLibrary = {
                     vous: 'arriveriez',
                     'ils/elles': 'arriveraient'
                 },
-                subjonctifPrésent: {
+                "Subjonctif présent": {
                     'que j\'': 'arrive',
                     'que tu': 'arrives',
                     'qu\'il/elle/on': 'arrive',
@@ -1529,7 +1541,7 @@ export const verbLibrary = {
                     'que vous': 'arriviez',
                     'qu\'ils/elles': 'arrivent'
                 },
-                futurProche: {
+                "Futur proche": {
                     je: 'vais arriver',
                     tu: 'vas arriver',
                     'il/elle/on': 'va arriver',
@@ -1537,7 +1549,7 @@ export const verbLibrary = {
                     vous: 'allez arriver',
                     'ils/elles': 'vont arriver'
                 },
-                passéComposé: {
+                "Passé composé": {
                     'j\'': 'ai arrivé',
                     tu: 'as arrivé',
                     'il/elle/on': 'a arrivé',
@@ -1550,7 +1562,7 @@ export const verbLibrary = {
         entrer: {
             type: 'regular',
             tense: {
-                présent: {
+                Présent: {
                     'j\'': 'entre',
                     tu: 'entres',
                     'il/elle/on': 'entre',
@@ -1558,7 +1570,7 @@ export const verbLibrary = {
                     vous: 'entrez',
                     'ils/elles': 'entrent'
                 },
-                futur: {
+                "Futur simple": {
                     'j\'': 'entrerai',
                     tu: 'entreras',
                     'il/elle/on': 'entrera',
@@ -1566,7 +1578,7 @@ export const verbLibrary = {
                     vous: 'entrerez',
                     'ils/elles': 'entreront'
                 },
-                passé: {
+                "Passé simple": {
                     'j\'': 'entrai',
                     tu: 'entras',
                     'il/elle/on': 'entra',
@@ -1574,7 +1586,7 @@ export const verbLibrary = {
                     vous: 'entrâtes',
                     'ils/elles': 'entrèrent'
                 },
-                imparfait: {
+                Imparfait: {
                     'j\'': 'entrais',
                     tu: 'entrais',
                     'il/elle/on': 'entrait',
@@ -1582,7 +1594,7 @@ export const verbLibrary = {
                     vous: 'entriez',
                     'ils/elles': 'entraient'
                 },
-                conditionnelPrésent: {
+                "Conditionnel présent": {
                     'j\'': 'entrerais',
                     tu: 'entrerais',
                     'il/elle/on': 'entrerait',
@@ -1590,7 +1602,7 @@ export const verbLibrary = {
                     vous: 'entreriez',
                     'ils/elles': 'entreraient'
                 },
-                subjonctifPrésent: {
+                "Subjonctif présent": {
                     'que j\'': 'entre',
                     'que tu': 'entres',
                     'qu\'il/elle/on': 'entre',
@@ -1598,7 +1610,7 @@ export const verbLibrary = {
                     'que vous': 'entriez',
                     'qu\'ils/elles': 'entrent'
                 },
-                futurProche: {
+                "Futur proche": {
                     je: 'vais entrer',
                     tu: 'vas entrer',
                     'il/elle/on': 'va entrer',
@@ -1606,7 +1618,7 @@ export const verbLibrary = {
                     vous: 'allez entrer',
                     'ils/elles': 'vont entrer'
                 },
-                passéComposé: {
+                "Passé composé": {
                     'j\'': 'ai entré',
                     tu: 'as entré',
                     'il/elle/on': 'a entré',
@@ -1619,7 +1631,7 @@ export const verbLibrary = {
         sortir: {
             type: 'irregular',
             tense: {
-                présent: {
+                Présent: {
                     je: 'sors',
                     tu: 'sors',
                     'il/elle/on': 'sort',
@@ -1627,7 +1639,7 @@ export const verbLibrary = {
                     vous: 'sortez',
                     'ils/elles': 'sortent'
                 },
-                futur: {
+                "Futur simple": {
                     je: 'sortirai',
                     tu: 'sortiras',
                     'il/elle/on': 'sortira',
@@ -1635,7 +1647,7 @@ export const verbLibrary = {
                     vous: 'sortirez',
                     'ils/elles': 'sortiront'
                 },
-                passé: {
+                "Passé simple": {
                     je: 'sortis',
                     tu: 'sortis',
                     'il/elle/on': 'sortit',
@@ -1643,7 +1655,7 @@ export const verbLibrary = {
                     vous: 'sortîtes',
                     'ils/elles': 'sortirent'
                 },
-                imparfait: {
+                Imparfait: {
                     je: 'sortais',
                     tu: 'sortais',
                     'il/elle/on': 'sortait',
@@ -1651,7 +1663,7 @@ export const verbLibrary = {
                     vous: 'sortiez',
                     'ils/elles': 'sortaient'
                 },
-                conditionnelPrésent: {
+                "Conditionnel présent": {
                     je: 'sortirais',
                     tu: 'sortirais',
                     'il/elle/on': 'sortirait',
@@ -1659,7 +1671,7 @@ export const verbLibrary = {
                     vous: 'sortiriez',
                     'ils/elles': 'sortiraient'
                 },
-                subjonctifPrésent: {
+                "Subjonctif présent": {
                     'que je': 'sorte',
                     'que tu': 'sortes',
                     'qu\'il/elle/on': 'sorte',
@@ -1667,7 +1679,7 @@ export const verbLibrary = {
                     'que vous': 'sortiez',
                     'qu\'ils/elles': 'aientent'
                 },
-                futurProche: {
+                "Futur proche": {
                     je: 'vais sortir',
                     tu: 'vas sortir',
                     'il/elle/on': 'va sortir',
@@ -1675,7 +1687,7 @@ export const verbLibrary = {
                     vous: 'allez sortir',
                     'ils/elles': 'vont sortir'
                 },
-                passéComposé: {
+                "Passé composé": {
                     'j\'': 'ai sorti',
                     tu: 'as sorti',
                     'il/elle/on': 'a sorti',
@@ -1688,7 +1700,7 @@ export const verbLibrary = {
         partir: {
             type: 'irregular',
             tense: {
-                présent: {
+                Présent: {
                     je: 'pars',
                     tu: 'pars',
                     'il/elle/on': 'part',
@@ -1696,7 +1708,7 @@ export const verbLibrary = {
                     vous: 'partez',
                     'ils/elles': 'partent'
                 },
-                futur: {
+                "Futur simple": {
                     je: 'partirai',
                     tu: 'partiras',
                     'il/elle/on': 'partira',
@@ -1704,7 +1716,7 @@ export const verbLibrary = {
                     vous: 'partirez',
                     'ils/elles': 'partiront'
                 },
-                passé: {
+                "Passé simple": {
                     je: 'partis',
                     tu: 'partis',
                     'il/elle/on': 'partit',
@@ -1712,7 +1724,7 @@ export const verbLibrary = {
                     vous: 'partîtes',
                     'ils/elles': 'partirent'
                 },
-                imparfait: {
+                Imparfait: {
                     je: 'partais',
                     tu: 'partais',
                     'il/elle/on': 'partait',
@@ -1720,7 +1732,7 @@ export const verbLibrary = {
                     vous: 'partiez',
                     'ils/elles': 'partaient'
                 },
-                conditionnelPrésent: {
+                "Conditionnel présent": {
                     je: 'partirais',
                     tu: 'partirais',
                     'il/elle/on': 'partirait',
@@ -1728,7 +1740,7 @@ export const verbLibrary = {
                     vous: 'partiriez',
                     'ils/elles': 'partiraient'
                 },
-                subjonctifPrésent: {
+                "Subjonctif présent": {
                     'que je': 'parte',
                     'que tu': 'partes',
                     'qu\'il/elle/on': 'parte',
@@ -1736,7 +1748,7 @@ export const verbLibrary = {
                     'que vous': 'partiez',
                     'qu\'ils/elles': 'partent'
                 },
-                futurProche: {
+                "Futur proche": {
                     je: 'vais partir',
                     tu: 'vas partir',
                     'il/elle/on': 'va partir',
@@ -1744,7 +1756,7 @@ export const verbLibrary = {
                     vous: 'allez partir',
                     'ils/elles': 'vont partir'
                 },
-                passéComposé: {
+                "Passé composé": {
                     je: 'suis parti',
                     tu: 'es parti',
                     'il/elle/on': 'est parti',
@@ -1757,7 +1769,7 @@ export const verbLibrary = {
         penser: {
             type: 'regular',
             tense: {
-                présent: {
+                Présent: {
                     je: 'pense',
                     tu: 'penses',
                     'il/elle/on': 'pense',
@@ -1765,7 +1777,7 @@ export const verbLibrary = {
                     vous: 'pensez',
                     'ils/elles': 'pensent'
                 },
-                futur: {
+                "Futur simple": {
                     je: 'penserai',
                     tu: 'penseras',
                     'il/elle/on': 'pensera',
@@ -1773,7 +1785,7 @@ export const verbLibrary = {
                     vous: 'penserez',
                     'ils/elles': 'penseront'
                 },
-                passé: {
+                "Passé simple": {
                     je: 'pensai',
                     tu: 'pensas',
                     'il/elle/on': 'pensa',
@@ -1781,7 +1793,7 @@ export const verbLibrary = {
                     vous: 'pensâtes',
                     'ils/elles': 'pensèrent'
                 },
-                imparfait: {
+                Imparfait: {
                     je: 'pensais',
                     tu: 'pensais',
                     'il/elle/on': 'pensait',
@@ -1789,7 +1801,7 @@ export const verbLibrary = {
                     vous: 'pensiez',
                     'ils/elles': 'pensaient'
                 },
-                conditionnelPrésent: {
+                "Conditionnel présent": {
                     je: 'penserais',
                     tu: 'penserais',
                     'il/elle/on': 'penserait',
@@ -1797,7 +1809,7 @@ export const verbLibrary = {
                     vous: 'penseriez',
                     'ils/elles': 'penseraient'
                 },
-                subjonctifPrésent: {
+                "Subjonctif présent": {
                     'que je': 'pense',
                     'que tu': 'penses',
                     'qu\'il/elle/on': 'pense',
@@ -1805,7 +1817,7 @@ export const verbLibrary = {
                     'que vous': 'pensiez',
                     'qu\'ils/elles': 'pensent'
                 },
-                futurProche: {
+                "Futur proche": {
                     je: 'vais penser',
                     tu: 'vas penser',
                     'il/elle/on': 'va penser',
@@ -1813,7 +1825,7 @@ export const verbLibrary = {
                     vous: 'allez penser',
                     'ils/elles': 'vont penser'
                 },
-                passéComposé: {
+                "Passé composé": {
                     'j\'': 'ai parti',
                     tu: 'as parti',
                     'il/elle/on': 'a parti',

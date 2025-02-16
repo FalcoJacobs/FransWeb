@@ -4,10 +4,14 @@
     <form>
         <div *ngFor= "let tense of tenses" class="formItem">
             <label>
-                <input type="checkbox" (change)="toggleSelection(selectedTenses, tense)" name="tense-{{tense}}"> {{ tense }}
+                <input type="checkbox" [checked]="selectedTenses.includes(tense)" (change)="toggleSelection(selectedTenses, tense)" name="tense-{{tense}}"> {{ tense }}
             </label>
         </div>
     </form>
+    <div class="tousAccunButtons">
+        <button (click)="selectAll(selectedTenses, tenses)">Tous</button>
+        <button (click)="deselectAll(selectedTenses)">Aucun</button>
+    </div>
 </div>
 <div class="formBlock">
     <h2>Verbes irréguliers:</h2>
@@ -15,10 +19,14 @@
     <form>
         <div *ngFor= "let verb of irregularVerbs" class="formItem">
             <label>
-                <input type="checkbox" (change)="toggleSelection(selectedIrregularVerbs, verb)" name="irregVerb-{{verb}}"> {{ verb }}
+                <input type="checkbox" [checked]="selectedIrregularVerbs.includes(verb)" (change)="toggleSelection(selectedIrregularVerbs, verb)" name="irregVerb-{{verb}}"> {{ verb }}
             </label>
         </div>
     </form>
+    <div class="tousAccunButtons">
+        <button (click)="selectAll(selectedIrregularVerbs, irregularVerbs)">Tous</button>
+        <button (click)="deselectAll(selectedIrregularVerbs)">Aucun</button>
+    </div>
 </div>
 <div class="formBlock">
     <h2>Verbes réguliers: </h2>
@@ -26,25 +34,29 @@
     <form>
         <div *ngFor= "let verb of regularVerbs" class="formItem">
             <label>
-                <input type="checkbox" (change)="toggleSelection(selectedRegularVerbs, verb)" name="regVerb-{{verb}}"> {{ verb }}
+                <input type="checkbox" [checked]="selectedRegularVerbs.includes(verb)" (change)="toggleSelection(selectedRegularVerbs, verb)" name="regVerb-{{verb}}"> {{ verb }}
             </label>
         </div>
     </form>
+    <div class="tousAccunButtons">
+        <button (click)="selectAll(selectedRegularVerbs, regularVerbs)">Tous</button>
+        <button (click)="deselectAll(selectedRegularVerbs)">Aucun</button>
+    </div>
 </div>
 <div class="extraOptionsTab">
     <h2>Options supplémentaires</h2>
     <form>
         <label>
-            <input type="checkbox" [(ngModel)]="testMode" name="testMode">Toetsmodus
+            <input type="checkbox" [(ngModel)]="testMode" name="testMode" disabled>Toetsmodus
         </label>
         <label>
             <input type="checkbox" [(ngModel)]="accentSensitive" name="accentSensitive">Accentgevoeligheid
         </label>
         <label>
-            <input type="checkbox" [(ngModel)]="allowMistakes" name="allowMistakes">Doorgaan ondanks verkeerd antwoord
+            <input type="checkbox" [(ngModel)]="allowMistakes" name="allowMistakes" disabled>Doorgaan ondanks verkeerd antwoord
         </label>
         <label>
-            <input type="checkbox" [(ngModel)]="hideResults" name="hideResults">Verberg resultaat
+            <input type="checkbox" [(ngModel)]="hideResults" name="hideResults" disabled>Verberg resultaat
         </label>
         <label>
             Aantal oefeningen: <input type="number" class="numberInput" min="1" value="20" [(ngModel)]="numExercises" name="numExercises">

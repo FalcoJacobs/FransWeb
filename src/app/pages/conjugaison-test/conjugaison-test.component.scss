@@ -1,0 +1,59 @@
+.testContainer{
+    width: 60vw;
+    margin: 4vh auto;
+    border: 1px solid var(--font-color);
+    background-color: var(--background-color);
+    padding: 1%;
+    h2{
+        text-align: center;
+        font-size: 27px;
+    }
+    .testInputContainer{
+        width: fit-content;
+        margin: 0 auto;
+        label{
+            font-size: 25px;
+        }
+        input{
+            font-size: 25px;
+            margin-left: .5vw;
+        }
+    }
+    .testResults{
+        width: 70%;
+        margin: 5vh auto 0;
+        h1{
+            text-align: center;
+        }
+        h2{
+            text-align: center;
+            font-size: 28px;
+        }
+        span{
+            display: block;
+            margin: 1.5vh 0;
+            p{
+                margin: 0;
+                font-size: 25px;
+                display: inline-block;
+            }
+        }
+        .correct{
+            color: #00FF00;
+            opacity: .8;
+        }
+        .incorrect{
+            color: #FF0000;
+        }
+        table{
+            display: block;
+            margin: 0 auto;
+            width: fit-content;
+            td{
+                font-size: 25px;
+                padding: 1%;
+                min-width: 14vw;
+            }
+        }
+    }
+}

@@ -1,1 +1,38 @@
-<p>conjugaison-test works!</p>
+<div class="testContainer">
+    <h2>Temp: {{ currentTense }}</h2>
+    <h2>Verbe: {{ currentVerb }}</h2>
+    <div class="testInputContainer">
+        <label>
+            {{ currentSubject }}  <input  [(ngModel)]="userInput" (keydown.enter)="checkAnswer()" placeholder="vervoeging" autocomplete="off" spellcheck="false">
+        </label>
+    </div>
+    <div class="testResults">
+        <h1 [ngClass]="{'correct': isCorrect === true, 'incorrect': isCorrect === false}">{{ isCorrect === null ? '...' : (isCorrect ? 'Juist' : 'Fout') }}</h1>
+        <hr>
+        <table>
+            <tr>
+                <td>Oefeningen:</td>
+                <td>{{ totalIncorrect + totalCorrect }} / {{ numExercises }}</td>
+            </tr>
+            <tr>
+                <td>Accuraat</td>
+                <td>{{ accuracy }}% ({{ totalCorrect }} / {{totalCorrect + totalIncorrect}})</td>
+            </tr>
+        </table>
+        <h2><u>Vorige oefening</u></h2>
+        <table>
+            <tr>
+                <td>Vorige vraag:</td>
+                <td>{{ previousSubject || '...' }} {{ previousVerb || '...'}} ({{previousTense || '...'}})</td>
+            </tr>
+            <tr>
+                <td>Vorige input:</td>
+                <td [ngClass]="{'correct': isCorrect === true, 'incorrect': isCorrect === false}">{{ previousInput || '...'}}</td>
+            </tr>
+            <tr>
+                <td>Vorig antwoord:</td>
+                <td>{{ previousAnswer || '...'}}</td>
+            </tr>
+        </table>
+    </div>
+</div>

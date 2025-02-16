@@ -66,4 +66,15 @@ export class ConjugaisonSelectComponent {
       this.selectedTenses.length > 0
     );
   }
+
+  selectAll(array: string[], values: string[]): void {
+    array.length = 0; 
+    array.push(...values); 
+    setTimeout(() => {}, 0);
+  }
+  
+  deselectAll(array: string[]): void {
+    array.length = 0;
+    setTimeout(() => {}, 0);
+  }
 }

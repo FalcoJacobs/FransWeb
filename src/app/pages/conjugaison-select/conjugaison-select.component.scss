@@ -14,8 +14,8 @@
         overflow-y: auto;
         height: 28vh;
         scrollbar-color: var(--font-color) var(--background-color);
-        width: fit-content;
-        margin: 0 auto;
+        // width: fit-content;
+        // margin: 0 auto;
         padding: 0% 5%;
         box-sizing: border-box;
     }
@@ -34,6 +34,19 @@
             width: 16px;
             accent-color: var(--background-color);
             outline: 1px solid var(--font-color);
+        }
+    }
+    .tousAccunButtons{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1vw;
+        button{
+            display: inline-block;
+            margin: 1vh 0vw;
+            padding: 1% 2%;
+            box-sizing: border-box;
+            font-size: 18px;
         }
     }
 }

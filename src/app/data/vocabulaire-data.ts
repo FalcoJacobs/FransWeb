@@ -12,6 +12,32 @@ export const vocabulaireCategories = [
         ]
     },
     {
+        category: "Basis Frans",
+        items: [
+            {
+                name: "Couleurs",
+                translation: "Kleuren",
+                wordCount: 24,
+                usability: 'not determined',
+                id: 'couleurs'
+            },
+            {
+                name: "Nombres",
+                translation: "Nummers",
+                wordCount: 34,
+                usability: 'not determined',
+                id: 'nombres'
+            },
+            {
+                name: "Jours, mois et saisons",
+                translation: "Dagen, maanden en seizoenen",
+                wordCount: 23,
+                usability: 'not determined',
+                id: 'jours-mois-saisons'
+            },
+        ]
+    },
+    {
         category: "C'est Lancé 5",
         items: [
             {
@@ -36,8 +62,7 @@ export const vocabulaireCategories = [
                 id: 'lance5-t2-e1'
             },
         ]
-
-    }
+    },
 ]
 export type VocabWord = { dutch: string | string[]; french: string | string[]};
 
@@ -344,5 +369,105 @@ export const vocabLists: VocabLists = {
             { dutch: 'schitterend', french: ['lumineux', 'lumineuse']},
             { dutch: 'zijn gezicht laten zien', french: 'pointer le bout de son nez'},
             { dutch: 'in je buurt', french: 'autour de chez soi'}
-        ]}
+        ]},
+    "couleurs": {
+        id: "couleurs",
+        name: "Couleurs",
+        words: [
+            { dutch: 'rood', french: 'rouge'},
+            { dutch: 'blauw', french: 'bleu'},
+            { dutch: 'geel', french: 'jaune'},
+            { dutch: 'groen', french: 'vert'},
+            { dutch: 'oranje', french: 'orange'},
+            { dutch: 'koper', french: 'cuivré'},
+            { dutch: 'paars', french: ['violet', 'pourpre']},
+            { dutch: 'roze', french: ['rose', 'rosé']},
+            { dutch: 'zwart', french: 'noir'},
+            { dutch: 'wit', french: 'blanc'},
+            { dutch: 'grijs', french: 'gris'},
+            { dutch: 'zilver', french: 'argenté'},
+            { dutch: 'bruin', french: ['marron', 'brun']},
+            { dutch: 'licht', french: 'clair'},
+            { dutch: 'donker', french: 'foncé'},
+            { dutch: 'beige', french: 'beige'},
+            { dutch: 'turquoise', french: 'turquoise'},
+            { dutch: 'indigo', french: 'indigo'},
+            { dutch: 'zand', french: 'sable'},
+            { dutch: 'lavendel', french: 'lavande'},
+            { dutch: 'aubergine', french: 'aubergine'},
+            { dutch: 'pastel', french: 'pastel'},
+            { dutch: 'fluorescerend', french: 'fluorescent'},
+            { dutch: 'metaalachtig', french: 'métallique'},
+        ]},
+    "nombres": {
+        id: "nombres",
+        name: "Nombres",
+        words: [
+            { dutch: "nul", french: "zéro" },
+            { dutch: "één", french: "un" },
+            { dutch: "twee", french: "deux" },
+            { dutch: "drie", french: "trois" },
+            { dutch: "vier", french: "quatre" },
+            { dutch: "vijf", french: "cinq" },
+            { dutch: "zes", french: "six" },
+            { dutch: "zeven", french: "sept" },
+            { dutch: "acht", french: "huit" },
+            { dutch: "negen", french: "neuf" },
+            { dutch: "tien", french: "dix" },
+            { dutch: "elf", french: "onze" },
+            { dutch: "twaalf", french: "douze" },
+            { dutch: "dertien", french: "treize" },
+            { dutch: "veertien", french: "quatorze" },
+            { dutch: "vijftien", french: "quinze" },
+            { dutch: "zestien", french: "seize" },
+            { dutch: "zeventien", french: ["dix-sept", "septante"]},
+            { dutch: "achttien", french: "dix-huit" },
+            { dutch: "negentien", french: ["dix-neuf", "nonante"] },
+            { dutch: "twintig", french: "vingt" },
+            { dutch: "dertig", french: "trente" },
+            { dutch: "veertig", french: "quarante" },
+            { dutch: "vijftig", french: "cinquante" },
+            { dutch: "zestig", french: "soixante" },
+            { dutch: "zeventig", french: "soixante-dix" },
+            { dutch: "tachtig", french: "quatre-vingt" },
+            { dutch: "negentig", french: "quatre-vingt-dix" },
+            { dutch: "honderd", french: "cent" },
+            { dutch: "duizend", french: "mille" },
+            { dutch: "tienduizend", french: "dix mille" },
+            { dutch: "honderdduizend", french: "cent mille" },
+            { dutch: "een miljoen", french: "un million" },
+            { dutch: "een miljard", french: "un milliard" }
+        ]
+    },
+    "jours-mois-saisons": {
+    id: "jours-mois-saisons",
+    name: "Jours, Mois et Saisons",
+    words: [
+        { dutch: "maandag", french: "lundi" },
+        { dutch: "dinsdag", french: "mardi" },
+        { dutch: "woensdag", french: "mercredi" },
+        { dutch: "donderdag", french: "jeudi" },
+        { dutch: "vrijdag", french: "vendredi" },
+        { dutch: "zaterdag", french: "samedi" },
+        { dutch: "zondag", french: "dimanche" },
+
+        { dutch: "januari", french: "janvier" },
+        { dutch: "februari", french: "février" },
+        { dutch: "maart", french: "mars" },
+        { dutch: "april", french: "avril" },
+        { dutch: "mei", french: "mai" },
+        { dutch: "juni", french: "juin" },
+        { dutch: "juli", french: "juillet" },
+        { dutch: "augustus", french: "août" },
+        { dutch: "september", french: "septembre" },
+        { dutch: "oktober", french: "octobre" },
+        { dutch: "november", french: "novembre" },
+        { dutch: "december", french: "décembre" },
+
+        { dutch: "lente", french: "printemps" },
+        { dutch: "zomer", french: "été" },
+        { dutch: "herfst", french: ["automne", "l'automne"] },
+        { dutch: "winter", french: "hiver" }
+    ]
+}
 }
