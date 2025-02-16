@@ -31,6 +31,8 @@ import { SubjonctifPresentComponent } from './pages/grammaire-pages/subjonctif-p
 import { ConjugaisonSelectComponent } from './pages/conjugaison-select/conjugaison-select.component';
 import { ConjugaisonTestComponent } from './pages/conjugaison-test/conjugaison-test.component';
 
+import { ClassementComponent } from './pages/classement/classement.component';
+
 export const routes: Routes = [
     { path:'', component: HomeComponent},
     { path:'login', component: LoginComponent},
@@ -64,6 +66,8 @@ export const routes: Routes = [
 
             { path: 'conjugaison/select', component: ConjugaisonSelectComponent},
             { path: 'conjugaison/test', component: ConjugaisonTestComponent},
+
+            { path: 'classement', component: ClassementComponent},
         ]
     }
 ];
