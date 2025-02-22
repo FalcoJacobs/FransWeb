@@ -1,5 +1,5 @@
 import { Component, OnInit} from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router, RouterLink } from '@angular/router';
 import { vocabLists } from '../../data/vocabulaire-data';
 import { VocabWord } from '../../data/vocabulaire-data';
 import { FormsModule } from '@angular/forms';
@@ -17,8 +17,10 @@ export class VocabulaireTestComponent {
   herhaalFouten: boolean = false;
 
   vocabList: any[] = [];
+  vocListId: string = '';
   availableWords: any[] = [];
   mistakes: any[] = [];
+  exerciseResults: any[] = [];
   currentWord: any | null = null;
 
   totalCorrect: number = 0;
@@ -33,17 +35,19 @@ export class VocabulaireTestComponent {
   userInput: string = "";
   isCorrect: boolean | null = null;
 
-  constructor(private route: ActivatedRoute) {}
+  correctAudio = new Audio('audio/vocabulaireCorrect.mp3');
+  incorrectAudio = new Audio('audio/vocabulaireIncorrect.mp3')
+
+  constructor(private route: ActivatedRoute, private router: Router) {}
 
   ngOnInit(): void {
     this.route.queryParams.subscribe(params => {
       const listId = params['list'];
+      this.vocListId = listId;
       if (listId && vocabLists[listId]) {
         this.vocabList = vocabLists[listId].words;
         this.availableWords = [...this.vocabList]
         this.newWord();
-      } else {
-        alert('Lijst niet gevonden.');
       }
       this.accentgevoelig = params['accent'] === 'true';
       this.tijddruk = params['timeLimit'] === 'true';
@@ -54,7 +58,18 @@ export class VocabulaireTestComponent {
   newWord(): void{
     if (this.availableWords.length === 0) {
       this.currentWord = null;
-      alert('end');
+      const queryParams = {
+        mistakes: JSON.stringify(this.mistakes),
+        exerciseResults: JSON.stringify(this.exerciseResults),
+        accuracy: this.accuracy,
+        totalCorrect: this.totalCorrect,
+        totalIncorrect: this.totalIncorrect,
+        mistakesAdded: this.mistakesAdded,
+        vocListId: this.vocListId,
+        accent: this.accentgevoelig,
+        repeatMistakes: this.herhaalFouten
+      };
+      this.router.navigate(['/home/vocabulaire/test-results'], {queryParams});
       return;
     }
 
@@ -80,19 +95,35 @@ export class VocabulaireTestComponent {
 
     this.previousDutch = this.currentWord.dutch;
     this.previousFrench = correctAnswers.join(', ');
-    this.previousInput = this.userInput || "..."
-
+    this.previousInput = this.userInput || "...";
+    this.correctAudio.pause();
+    this.correctAudio.currentTime = 0;
+    this.incorrectAudio.pause();
+    this.incorrectAudio.currentTime = 0;
     if (isCorrect){
+      this.correctAudio.play();
       this.totalCorrect++;
     } else {
-      
+      this.incorrectAudio.play();
+      // en dan de juiste uitspraak audio afspelen
       if (this.herhaalFouten){
         this.availableWords.push(this.currentWord);
         this.mistakesAdded++;
       }
       this.totalIncorrect++;
-      this.mistakes.push(this.currentWord);
+      this.mistakes.push({
+        dutch: this.previousDutch,
+        french: this.previousFrench,
+        userInput: this.previousInput,
+        correct: isCorrect});
     }
+
+    this.exerciseResults.push({
+      dutch: this.previousDutch,
+      french: this.previousFrench,
+      userInput: this.previousInput,
+      correct: isCorrect
+    });
 
     this.isCorrect = isCorrect;
     this.updateAccuracy();

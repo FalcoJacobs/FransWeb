@@ -1,0 +1,59 @@
+<h1>Resultaten:</h1>
+<div class="statistieken">
+    <table>
+        <tr>
+            <td>Oefeningen:</td>
+            <td>{{ totalCorrect + totalIncorrect }}</td>
+        </tr>
+        <tr>
+            <td>Juist:</td>
+            <td>{{ totalCorrect }}</td>
+        </tr>
+        <tr>
+            <td>Fout:</td>
+            <td>{{ totalIncorrect }}</td>
+        </tr>
+        <tr>
+            <td>Skore:</td>
+            <td>{{ accuracy }}%</td>
+        </tr>
+    </table>
+</div>
+<div class="oefeningenLijst">
+    <h1>Oefeningen</h1>
+    <hr>
+    <table>
+        <thead>
+            <th>Oefening</th>
+            <th>Nederlands</th>
+            <th>Correct Frans</th>
+            <th>Input</th>
+        </thead>
+        <tr *ngFor = 'let item of exerciseResults; let i = index;'>
+            <td>{{i + 1}} </td>
+            <td>{{item.dutch}}</td>
+            <td>{{item.french}}</td>
+            <td [ngClass]="{'correct': item.correct === true, 'incorrect': item.correct === false}" >{{item.userInput}}</td>
+        </tr>
+    </table>
+    <a [routerLink]="['/home/vocabulaire/test-options']" [queryParams]="{ list }">Beoefen originele lijst</a>
+</div>
+<div class="oefeningenLijst">
+    <h1>Fouten</h1>
+    <hr>
+    <table>
+        <thead>
+            <th>Fout</th>
+            <th>Nederlands</th>
+            <th>Correct Frans</th>
+            <th>Input</th>
+        </thead>
+        <tr *ngFor = 'let item of mistakes; let i = index;'>
+            <td>{{i + 1}} </td>
+            <td>{{item.dutch}}</td>
+            <td>{{item.french}}</td>
+            <td class="incorrect">{{item.userInput}}</td>
+        </tr>
+    </table>
+    <a [routerLink]="['/home/vocabulaire/test-options']" [queryParams]="{  }">Beoefen fouten lijst</a>
+</div>

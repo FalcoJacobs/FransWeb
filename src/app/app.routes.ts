@@ -17,6 +17,7 @@ import { VocabulaireOfficialComponent } from './pages/vocabulaire-official/vocab
 import { VocabulaireCommunityComponent } from './pages/vocabulaire-community/vocabulaire-community.component';
 import { VocabulaireTestOptionsComponent } from './pages/vocabulaire-test-options/vocabulaire-test-options.component';
 import { VocabulaireTestComponent } from './pages/vocabulaire-test/vocabulaire-test.component';
+import { VocabulaireResultComponent } from './pages/vocabulaire-result/vocabulaire-result.component';
 
 import { GrammaireComponent } from './pages/grammaire/grammaire.component';
 import { PresentComponent } from './pages/grammaire-pages/present/present.component';
@@ -50,6 +51,8 @@ export const routes: Routes = [
             { path: 'vocabulaire/community', component: VocabulaireCommunityComponent},
             { path: 'vocabulaire/test-options', component: VocabulaireTestOptionsComponent},
             { path: 'vocabulaire/test', component: VocabulaireTestComponent},
+            { path: 'vocabulaire/test-results', component: VocabulaireResultComponent},
+
 
 
             { path: 'grammaire', component: GrammaireComponent},
