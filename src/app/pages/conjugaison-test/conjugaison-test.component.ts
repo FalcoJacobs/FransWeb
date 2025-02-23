@@ -1,7 +1,7 @@
-import { CommonModule } from '@angular/common';
+import { CommonModule, ɵnormalizeQueryParams } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { verbLibrary, VerbLibrary } from '../../data/conjugaison-data';
 
 @Component({
@@ -12,6 +12,9 @@ import { verbLibrary, VerbLibrary } from '../../data/conjugaison-data';
 })
 export class ConjugaisonTestComponent implements OnInit{
   verbLibrary: VerbLibrary = verbLibrary;
+
+  mistakes: any[] = [];
+  exerciseResults: any[] = [];
 
   selectedTenses: string[] = [];
   selectedIrregularVerbs: string[] = [];
@@ -41,7 +44,10 @@ export class ConjugaisonTestComponent implements OnInit{
   hideResults: boolean = false;
   numExercises: number = 20;
 
-  constructor(private route: ActivatedRoute) {}
+  correctAudio = new Audio('audio/vocabulaireCorrect.mp3');
+  incorrectAudio = new Audio('audio/vocabulaireIncorrect.mp3')
+
+  constructor(private route: ActivatedRoute, private router: Router) {}
 
   ngOnInit(): void {
     this.route.queryParams.subscribe(params => {
@@ -72,14 +78,13 @@ export class ConjugaisonTestComponent implements OnInit{
       alert("ERROR");
       return
     }
-    if ((this.totalCorrect + this.totalIncorrect) === this.numExercises){
-      alert('end');
-    }
+
     this.previousTense = this.currentTense;
     this.previousVerb = this.currentVerb;
     this.previousSubject = this.currentSubject;
     this.previousInput = this.userInput;
     this.previousAnswer = this.correctAnswer;
+    
 
     this.userInput = '';
     this.currentTense = this.selectedTenses[Math.floor(Math.random() * this.selectedTenses.length)];
@@ -96,12 +101,50 @@ export class ConjugaisonTestComponent implements OnInit{
     }else{
       this.isCorrect = this.userInput.trim().toLowerCase() === this.correctAnswer.trim().toLowerCase();
     }
+
+    this.correctAudio.pause();
+    this.correctAudio.currentTime = 0;
+    this.incorrectAudio.pause();
+    this.incorrectAudio.currentTime = 0;
+
     if(this.isCorrect){
+      this.correctAudio.play();
       this.totalCorrect++;
     }else{
+      this.incorrectAudio.play();
       this.totalIncorrect++;
+      this.mistakes.push({
+        tense: this.currentTense,
+        verb: this.currentVerb,
+        subject: this.currentSubject,
+        answer: this.correctAnswer,
+        input: this.userInput,
+        correct: this.isCorrect
+      });
     }
+    
     this.updateAccuracy()
+
+    this.exerciseResults.push({
+      tense: this.currentTense,
+      verb: this.currentVerb,
+      subject: this.currentSubject,
+      answer: this.correctAnswer,
+      input: this.userInput,
+      correct: this.isCorrect
+    });
+
+    if ((this.totalCorrect + this.totalIncorrect) === this.numExercises) {
+      const queryParams = {
+        mistakes: JSON.stringify(this.mistakes),
+        exerciseResults: JSON.stringify(this.exerciseResults),
+        accuracy: this.accuracy,
+        totalCorrect: this.totalCorrect,
+        totalIncorrect: this.totalIncorrect,
+      };
+      this.router.navigate(['/home/conjugaison/test-results'], { queryParams });
+      return;
+    }
     this.newExercise();
   }
 

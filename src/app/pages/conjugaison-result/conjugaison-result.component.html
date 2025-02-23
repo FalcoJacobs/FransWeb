@@ -1,0 +1,65 @@
+<h1>Resultaten:</h1>
+<div class="statistieken">
+    <table>
+        <tr>
+            <td>Oefeningen:</td>
+            <td>{{ totalCorrect + totalIncorrect }}</td>
+        </tr>
+        <tr>
+            <td>Juist:</td>
+            <td>{{ totalCorrect }}</td>
+        </tr>
+        <tr>
+            <td>Fout:</td>
+            <td>{{ totalIncorrect }}</td>
+        </tr>
+        <tr>
+            <td>Skore:</td>
+            <td>{{ accuracy }}%</td>
+        </tr>
+    </table>
+</div>
+<div class="oefeningenLijst">
+    <h1>Oefeningen</h1>
+    <hr>
+    <table>
+        <thead>
+            <th>Oefening</th>
+            <th>Tijd</th>
+            <th>Werkwoord</th>
+            <th>Onderwerp</th>
+            <th>Antwoord</th>
+            <th>Input</th>
+        </thead>
+        <tr *ngFor = 'let item of exerciseResults; let i = index;'>
+            <td>{{i + 1}} </td>
+            <td>{{item.tense}}</td>
+            <td>{{item.verb}}</td>
+            <td>{{item.subject}}</td>
+            <td>{{item.answer}}</td>
+            <td [ngClass]="{'correct': item.correct === true, 'incorrect': item.correct === false}" >{{item.input || '...'}}</td>
+        </tr>
+    </table>
+</div>
+<div class="oefeningenLijst">
+    <h1>Fouten</h1>
+    <hr>
+    <table>
+        <thead>
+            <th>Fout</th>
+            <th>Tijd</th>
+            <th>Werkwoord</th>
+            <th>Onderwerp</th>
+            <th>Antwoord</th>
+            <th>Input</th>
+        </thead>
+        <tr *ngFor = 'let item of mistakes; let i = index;'>
+            <td>{{i + 1}} </td>
+            <td>{{item.tense}}</td>
+            <td>{{item.verb}}</td>
+            <td>{{item.subject}}</td>
+            <td>{{item.answer}}</td>
+            <td class="incorrect">{{item.input || '...'}}</td>
+        </tr>
+    </table>
+</div>

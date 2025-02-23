@@ -33,6 +33,7 @@ import { ConjugaisonSelectComponent } from './pages/conjugaison-select/conjugais
 import { ConjugaisonTestComponent } from './pages/conjugaison-test/conjugaison-test.component';
 
 import { ClassementComponent } from './pages/classement/classement.component';
+import { ConjugaisonResultComponent } from './pages/conjugaison-result/conjugaison-result.component';
 
 export const routes: Routes = [
     { path:'', component: HomeComponent},
@@ -69,6 +70,7 @@ export const routes: Routes = [
 
             { path: 'conjugaison/select', component: ConjugaisonSelectComponent},
             { path: 'conjugaison/test', component: ConjugaisonTestComponent},
+            { path: 'conjugaison/test-results', component: ConjugaisonResultComponent},
 
             { path: 'classement', component: ClassementComponent},
         ]
