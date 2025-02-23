@@ -1,0 +1,80 @@
+<div class="leaderboardWrapper">
+    <div class="leaderboardOptions">
+        <a [routerLink]="['/home/classement']" [queryParams]="{ selected: 'Vocabulaire' }">Vocabulaire</a> <!-- Aantal oefeningen gedaan -->
+        <a [routerLink]="['/home/classement']" [queryParams]="{ selected: 'Conjugaison' }">Conjugaison</a> <!-- Aantal oefeningen gedaan -->
+        <a [routerLink]="['/home/classement']" [queryParams]="{ selected: 'Woordenboek' }">Woordenboek</a> <!-- Aantal woorden in woordenboek -->
+        <a [routerLink]="['/home/classement']" [queryParams]="{ selected: 'Conjugaison-masteries' }">Conjugaison Masteries</a> <!-- Aantal masterie punten iemand heeft -->
+        <a [routerLink]="['/home/classement']" [queryParams]="{ selected: 'Achievements' }">Achievements</a> <!-- Aantal achievement punten iemand heeft -->
+        <a [routerLink]="['/home/classement']" [queryParams]="{ selected: 'Level' }">Level</a> <!-- Welk level mensen zijn -->
+    </div>
+    <hr>
+    <div class="leaderboard">
+        <h1>{{ selected }}</h1>
+        <div class="leaderboardTable">
+            <table>
+                <thead>
+                    <th>Positie</th>
+                    <th>Gebruiker</th>
+                    <th>Score</th>
+                </thead>
+                <tr class="result">
+                    <td>1</td>
+                    <td>Josef</td>
+                    <td>500</td>
+                </tr>
+                <tr class="result">
+                    <td>2</td>
+                    <td>Marie</td>
+                    <td>480</td>
+                </tr>
+                <tr class="result">
+                    <td>3</td>
+                    <td>Gerard</td>
+                    <td>465</td>
+                </tr>
+                <tr class="result">
+                    <td>4</td>
+                    <td>Mathilda</td>
+                    <td>460</td>
+                </tr>
+                <tr class="result">
+                    <td>5</td>
+                    <td>Patrick</td>
+                    <td>450</td>
+                </tr>
+                <tr class="result">
+                    <td>...</td>
+                    <td>...</td>
+                    <td>...</td>
+                </tr>
+                <tr class="result">
+                    <td>...</td>
+                    <td>...</td>
+                    <td>...</td>
+                </tr>
+                <tr class="result">
+                    <td>...</td>
+                    <td>...</td>
+                    <td>...</td>
+                </tr>
+                <tr class="result">
+                    <td>...</td>
+                    <td>...</td>
+                    <td>...</td>
+                </tr>
+                <tr class="result">
+                    <td>...</td>
+                    <td>...</td>
+                    <td>...</td>
+                </tr>
+                <tr class="result">
+                    <td>...</td>
+                    <td>...</td>
+                    <td>...</td>
+                </tr>
+                <!-- Instead use ngFor for all the users with progress. -->
+            </table>
+
+        </div>
+    </div>
+</div>

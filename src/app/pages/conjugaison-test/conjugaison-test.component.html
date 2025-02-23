@@ -3,7 +3,7 @@
     <h2>Verbe: {{ currentVerb }}</h2>
     <div class="testInputContainer">
         <label>
-            {{ currentSubject }}  <input  [(ngModel)]="userInput" (keydown.enter)="checkAnswer()" placeholder="vervoeging" autocomplete="off" spellcheck="false">
+            {{ currentSubject }}  <input  [(ngModel)]="userInput" (keyup.enter)="checkAnswer()" placeholder="vervoeging" autocomplete="off" spellcheck="false">
         </label>
     </div>
     <div class="testResults">

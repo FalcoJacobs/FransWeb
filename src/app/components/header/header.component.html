@@ -5,7 +5,7 @@
       <a routerLink="/home/grammaire">Grammaire</a>
       <a routerLink="/home/vocabulaire">Vocabulaire</a>
       <a routerLink="/home/conjugaison/select">Conjugaison</a>
-      <a routerLink="/home/classement">Classement</a>
+      <a routerLink="/home/classement" [queryParams]="{ selected: 'vocabulaire' }">Classement</a>
       <a routerLink="/home/profile">Profile</a>
       <button (click)="logout()">Logout</button>
     </nav>
