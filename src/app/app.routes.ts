@@ -39,6 +39,8 @@ import { ProfileComponent } from './pages/profile/profile.component';
 
 import { PersonalDictionairyComponent } from './pages/personal-dictionary/personal-dictionary.component';
 
+import { VerbMasteriesComponent } from './pages/verb-masteries/verb-masteries.component';
+
 export const routes: Routes = [
     { path:'', component: HomeComponent},
     { path:'login', component: LoginComponent},
@@ -81,6 +83,8 @@ export const routes: Routes = [
             { path: 'profile', component: ProfileComponent},
 
             { path: 'personal-dictionary', component: PersonalDictionairyComponent},
+
+            { path: 'verb-masteries', component: VerbMasteriesComponent}
         ]
     }
 ];

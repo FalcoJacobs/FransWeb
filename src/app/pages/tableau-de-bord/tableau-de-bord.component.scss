@@ -5,23 +5,26 @@
 }
 h1{
     font-weight: 500;
-    margin: 0;
-    padding: 2vh 0 1vh;
+    margin: 3vh 0 1vh;
+    text-align: center;
 }
 .mainContent{
+    background-color: var(--background-color);
     min-width: 380px;
     width: 60vw;
     display:block;
-    margin: 0 auto;
+    margin: 3vh auto 5vh;
+    padding: 0.5% 1% 1%;
+    border-radius: 30px;
     .blockOfContent{
         background-color: var(--background-color);
-        padding: 0% 1%;
-        height: 20vh;
+        height: 30vh;
         min-height: 100px;
         border: 2px solid var(--font-color);
         overflow-y: auto;
         scrollbar-color: var(--font-color) var(--background-color);
         scrollbar-width:3px;
+        border-radius: 30px;
         ul, ol{
             margin: 0;
             li{
@@ -34,6 +37,23 @@ h1{
         }
         p{
             margin: 0;
+        }
+        table{
+            border-collapse: collapse;
+            width: 100%;
+            th{
+                background-color: var(--accent-background-color);
+            }
+            td, th{
+                min-width: 5vw;
+                border-bottom: 1px solid var(--font-color);
+                padding: 1%;
+                text-align: center;
+                a{
+                    color: var(--font-color);
+                    font-size: 18px;
+                }
+            }
         }
     }
 }

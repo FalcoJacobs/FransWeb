@@ -1,0 +1,37 @@
+.verbMasteriesWrapper{
+    background-color: var(--background-color);
+    width: 60vw;
+    margin: 3vh auto;
+    padding: 1%;
+    h1{
+        text-align: center;
+        margin: 1vh 0 3vh;
+        font-weight: 500;
+        text-decoration: underline;
+    }
+    table{
+        width: fit-content;
+        margin: 2vh auto;
+        border-collapse: collapse;
+        border: 1px solid var(--font-color);
+        th{
+            min-width: 12vw;
+            background-color: var(--accent-background-color);
+            padding: 1%;
+            font-size: 20px;
+        }
+        td{
+            outline: 1px solid var(--font-color);
+            padding: 1%;
+            text-align: center;
+            font-size: 18px;
+            a{
+                color: rgb(0, 153, 255);
+                &:hover{
+                    opacity: .8;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}
