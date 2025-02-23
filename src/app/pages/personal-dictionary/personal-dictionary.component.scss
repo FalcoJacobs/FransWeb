@@ -1,0 +1,46 @@
+h2{
+    font-weight: 500;
+    text-align: center;
+}
+.woordenboek{
+    height: 75vh;
+    background: var(--background-color);
+    width: 60vw;
+    margin: 1vh auto;
+    padding: .2%;
+    table{
+        th{
+            outline: 2px solid var(--background-color);
+            background-color: var(--accent-background-color);
+            width: 60vw;
+            font-size: 25px;
+        }
+        td{
+            padding: 1%;
+            border-bottom: 1px solid var(--font-color);
+            font-size: 18px;
+            min-width: 25vw;
+            .woordSoort{
+                opacity: .6;
+                font-size: 15px;
+            }
+            .mf{
+                font-size: 13px;
+                vertical-align: top;
+                opacity: .9;
+            }
+            .masculin{
+                color: rgb(0, 195, 255);
+            }
+            .feminin{
+                color: pink;
+            }
+            em{
+                opacity: .9;
+            };
+            .wordId{
+                font-size: 8px;
+            }
+        }
+    }
+}

@@ -8,6 +8,6 @@ import { RouterLink } from '@angular/router';
   styleUrl: './profile.component.scss'
 })
 export class ProfileComponent {
-  username: string = '';
+  username: string = '@JohnDoe';
 
 }

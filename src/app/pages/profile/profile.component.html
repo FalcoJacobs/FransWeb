@@ -2,7 +2,7 @@
     <img src="images/default-avatar.png" alt="Profiel Foto">
     <div class="profileInformation">
         <h1>John Doe &ensp; <span>(student)</span></h1>
-        <h4>&#64;JohnDoe</h4>
+        <h4>{{ username }}</h4>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus fugit iusto assumenda error velit earum iste praesentium placeat itaque, sunt aliquam excepturi porro! Velit voluptatum sed inventore illum, accusamus quo.</p>
         <h4>Gebruiker sinds: 23 augustus 2025</h4>
         <h4>Lid: 5 Doorstroom GO! talent</h4>
@@ -10,7 +10,7 @@
     <h2>Badges</h2>
     <div class="displayBadges"> <!-- Hier worden de badges vertoont dat de gebruiker zichtbaar wilt op zijn profiel.-->
     </div>
-    <a [routerLink]="['/home/dictionairy']" [queryParams]="{ username }">Persoonlijk Woordenboek</a>
+    <a [routerLink]="['/home/personal-dictionary']" [queryParams]="{ username }">Persoonlijk Woordenboek</a>
     <div class="personalDictionairy"> <!-- Aantal verschillende woorden wordt vertoont, aantal woorden voor de verschillende rangen-->
     </div>
     <a [routerLink]="['/home/verb-masteries']" [queryParams]="{ username }">Werkwoord Masteries</a>

@@ -37,6 +37,8 @@ import { ConjugaisonResultComponent } from './pages/conjugaison-result/conjugais
 
 import { ProfileComponent } from './pages/profile/profile.component';
 
+import { PersonalDictionairyComponent } from './pages/personal-dictionary/personal-dictionary.component';
+
 export const routes: Routes = [
     { path:'', component: HomeComponent},
     { path:'login', component: LoginComponent},
@@ -77,6 +79,8 @@ export const routes: Routes = [
             { path: 'classement', component: ClassementComponent},
 
             { path: 'profile', component: ProfileComponent},
+
+            { path: 'personal-dictionary', component: PersonalDictionairyComponent},
         ]
     }
 ];
