@@ -1,0 +1,68 @@
+.profileWrapper{
+    width: 60vw;
+    margin: 3vh auto;
+    background-color: var(--background-color);
+    padding: 2%;
+    img{
+        width: 20%;
+        margin-right: 3%;
+        border: 0px solid var(--font-color);
+        border-radius: 200px;
+    }
+    h2, a{
+        margin: 4vh 0 0;
+        font-size: 22px;
+        font-weight: 400;
+    }
+    a{
+        text-decoration: none;
+        color: var(--font-color);
+        &:hover{
+            text-decoration: underline;
+        }
+    }
+    .profileInformation{
+        width: 77%;
+        vertical-align: top;
+        display: inline-block;
+        span{
+            opacity: .5;
+            padding-left: .3vw;
+            font-size: 20px;
+        }
+        h1{
+            margin: 0;
+            font-size: 26px;
+        }
+        h4{
+            margin: 0;
+            opacity: .6;
+        }
+        p{
+            margin: 1.5vh 0;
+            opacity: .8;
+            font-size: 16px;
+        }
+    }
+    .displayBadges{
+        margin: 1vh 0 5vh;
+        height: 10vh;
+        border: 1px solid var(--font-color);
+    }
+    .personalDictionairy{
+        margin: 1vh 0 5vh;
+        height: 10vh;
+        border: 1px solid var(--font-color);
+    }
+    .verbMasteries{
+        margin: 1vh 0 5vh;
+        height: 10vh;
+        border: 1px solid var(--font-color);
+    }
+    .testResults{
+        margin: 1vh 0 5vh;
+        height: 10vh;
+        border: 1px solid var(--font-color);
+
+    }
+}

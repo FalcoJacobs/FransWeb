@@ -35,6 +35,8 @@ import { ConjugaisonTestComponent } from './pages/conjugaison-test/conjugaison-t
 import { ClassementComponent } from './pages/classement/classement.component';
 import { ConjugaisonResultComponent } from './pages/conjugaison-result/conjugaison-result.component';
 
+import { ProfileComponent } from './pages/profile/profile.component';
+
 export const routes: Routes = [
     { path:'', component: HomeComponent},
     { path:'login', component: LoginComponent},
@@ -73,6 +75,8 @@ export const routes: Routes = [
             { path: 'conjugaison/test-results', component: ConjugaisonResultComponent},
 
             { path: 'classement', component: ClassementComponent},
+
+            { path: 'profile', component: ProfileComponent},
         ]
     }
 ];

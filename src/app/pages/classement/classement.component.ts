@@ -5,7 +5,7 @@ import { ActivatedRoute, RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-classement',
-  imports: [RouterLink, CommonModule, NgFor],
+  imports: [RouterLink, CommonModule],
   templateUrl: './classement.component.html',
   styleUrl: './classement.component.scss'
 })
