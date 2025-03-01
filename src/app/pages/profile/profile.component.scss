@@ -3,6 +3,7 @@
     margin: 3vh auto;
     background-color: var(--background-color);
     padding: 2%;
+    border-radius: 8px;
     img{
         width: 20%;
         margin-right: 3%;
@@ -44,25 +45,10 @@
             font-size: 16px;
         }
     }
-    .displayBadges{
+    .displayBadges, .personalDictionairy, .verbMasteries, .testResults{
         margin: 1vh 0 5vh;
-        height: 10vh;
+        height: 12vh;
         border: 1px solid var(--font-color);
-    }
-    .personalDictionairy{
-        margin: 1vh 0 5vh;
-        height: 10vh;
-        border: 1px solid var(--font-color);
-    }
-    .verbMasteries{
-        margin: 1vh 0 5vh;
-        height: 10vh;
-        border: 1px solid var(--font-color);
-    }
-    .testResults{
-        margin: 1vh 0 5vh;
-        height: 10vh;
-        border: 1px solid var(--font-color);
-
+        border-radius: 8px;
     }
 }

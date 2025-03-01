@@ -15,7 +15,7 @@ h1{
     display:block;
     margin: 3vh auto 5vh;
     padding: 0.5% 1% 1%;
-    border-radius: 30px;
+    border-radius: 8px;
     .blockOfContent{
         background-color: var(--background-color);
         height: 30vh;
@@ -24,7 +24,7 @@ h1{
         overflow-y: auto;
         scrollbar-color: var(--font-color) var(--background-color);
         scrollbar-width:3px;
-        border-radius: 30px;
+        border-radius: 8px;
         ul, ol{
             margin: 0;
             li{

@@ -6,6 +6,7 @@
     padding: 1%;
     vertical-align: top;
     outline: 1px solid var(--font-color);
+    border-radius: 8px;
     h2{
         font-size: 25px;
         text-align: center;
@@ -56,6 +57,7 @@
     margin: 0 auto;
     background-color: var(--background-color);
     padding: 1%;
+    border-radius: 8px;
     h2{
         margin:  0 0 1vh 0;
         text-decoration: underline;
@@ -99,6 +101,7 @@ button{
     border: none;
     border: 1px solid var(--font-color);
     opacity: .9;
+    border-radius: 8px;
     &:hover{
         cursor: pointer;
         opacity: 1;

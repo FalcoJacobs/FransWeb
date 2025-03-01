@@ -8,12 +8,14 @@ h2{
     width: 60vw;
     margin: 1vh auto;
     padding: .2%;
+    border-radius: 8px;
     table{
         th{
             outline: 2px solid var(--background-color);
             background-color: var(--accent-background-color);
             width: 60vw;
             font-size: 25px;
+            border-radius: 8px;
         }
         td{
             padding: 1%;
