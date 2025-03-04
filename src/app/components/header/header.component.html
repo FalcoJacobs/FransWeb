@@ -1,12 +1,12 @@
 <header> 
     <h1>FransWeb</h1>
     <nav>
-      <a routerLink="/home">Dashboard</a>
-      <a routerLink="/home/grammaire">Grammaire</a>
-      <a routerLink="/home/vocabulaire">Vocabulaire</a>
-      <a routerLink="/home/conjugaison/select">Werkwoorden</a>
-      <a routerLink="/home/classement" [queryParams]="{ selected: 'Vocabulaire' }">Klassement</a>
-      <a routerLink="/home/profile">Profiel</a>
+      <a routerLink="/home" [queryParams]="{ a: 'A' }" routerLinkActive="activeLink">Dashboard</a>
+      <a routerLink="/home/grammaire" routerLinkActive="activeLink">Grammaire</a>
+      <a routerLink="/home/vocabulaire" routerLinkActive="activeLink">Vocabulaire</a>
+      <a routerLink="/home/conjugaison/select" routerLinkActive="activeLink">Werkwoorden</a>
+      <a routerLink="/home/classement" [queryParams]="{ selected: 'Vocabulaire' }" routerLinkActive="activeLink">Klassement</a>
+      <a routerLink="/home/profile" routerLinkActive="activeLink">Profiel</a>
       <button (click)="logout()">Logout</button>
     </nav>
 </header>
