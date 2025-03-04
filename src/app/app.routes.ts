@@ -36,9 +36,8 @@ import { ClassementComponent } from './pages/classement/classement.component';
 import { ConjugaisonResultComponent } from './pages/conjugaison-result/conjugaison-result.component';
 
 import { ProfileComponent } from './pages/profile/profile.component';
-
+import { SettingsComponent } from './pages/settings/settings.component';
 import { PersonalDictionairyComponent } from './pages/personal-dictionary/personal-dictionary.component';
-
 import { VerbMasteriesComponent } from './pages/verb-masteries/verb-masteries.component';
 
 export const routes: Routes = [
@@ -81,9 +80,8 @@ export const routes: Routes = [
             { path: 'classement', component: ClassementComponent},
 
             { path: 'profile', component: ProfileComponent},
-
+            { path: 'profile/settings', component: SettingsComponent},
             { path: 'personal-dictionary', component: PersonalDictionairyComponent},
-
             { path: 'verb-masteries', component: VerbMasteriesComponent}
         ]
     }

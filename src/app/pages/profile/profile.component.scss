@@ -51,4 +51,18 @@
         border: 1px solid var(--font-color);
         border-radius: 8px;
     }
+    .settingsLink{
+        outline: 1px solid var(--font-color);
+        padding: .75%;
+        font-size: 20px;
+        display: block;
+        margin: 0 auto;
+        width: fit-content;
+        transition: .2s;
+        &:hover{
+            background-color: var(--font-color);
+            color: var(--background-color);
+        }
+    }
+    
 }

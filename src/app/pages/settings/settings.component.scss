@@ -1,0 +1,41 @@
+.settingsWrapper{
+    width: 40vw;
+    min-width: fit-content;
+    margin: 3vh auto;
+    background-color: var(--background-color);
+    border-radius: 8px;
+    padding: 1%;
+    h1{
+        text-align: center;
+    }
+    h2{
+        text-decoration: underline;
+        margin-bottom: 1vh;
+    }
+    label{
+        display: block;
+        font-size: 25px;
+        -webkit-user-select: none; /* Safari */
+        -ms-user-select: none; /* IE 10 and IE 11 */
+        user-select: none; /* Standard syntax */
+        cursor: pointer;
+        input{
+            height: 18px;
+            width: 18px;
+            accent-color: var(--background-color);
+            outline: 1px solid var(--font-color);
+            margin-right: .5vw;
+        }
+        select{
+            font-size: 22px;
+            background-color: var(--background-color);
+            color: var(--font-color);
+            outline: 1px solid var(--font-color);
+        }
+        option{
+            font-size: 22px;
+            background-color: var(--background-color);
+            color: var(--font-color);
+        }
+    }
+}
