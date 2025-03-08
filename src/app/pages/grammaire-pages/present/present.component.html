@@ -1,7 +1,7 @@
 <div class="contentWrapper">
 
     <h1>Indicatif présent</h1>
-    <h3>(tegenwoordige tijd)</h3>
+    <h3>(Tegenwoordige tijd)</h3>
     <p>Als er iets nu, op dit moment afspeelt is dat in de tegenwoordige tijd.</p>
 
     <!-- Onderwerp -->
@@ -30,13 +30,8 @@
                 </tr>
                 <tr>
                     <td>3e enkelvoud</td>
-                    <td>Hij</td>
-                    <td>Il</td>
-                </tr>
-                <tr>
-                    <td>3e enkelvoud</td>
-                    <td>Zij</td>
-                    <td>Elle</td>
+                    <td>Hij / Zij</td>
+                    <td>Il / Elle</td>
                 </tr>
                 <tr>
                     <td>1e meervoud</td>
@@ -55,27 +50,33 @@
                 </tr>
             </tbody>
         </table>
+        <p>Ils wordt gebruikt voor groepen waar minstens 1 man in zit en Elles voor groepen van enkel vrouwen</p>
     </div>
 
     <!-- De verschillende soorten werkwoorden -->
     <div class="partContainer">
         <h2>Er zijn 3 verschillende soorten werkwoorden:</h2>
         <ol>
-            <li>Werkwoorden op -ER (bijv: Parler, Aimer, Donner, ...</li>
-            <li>Werkwoorden op -IR (bevat 3 types:
+            <li>Werkwoorden op -ER (bijv: Parler, Aimer, Donner, ...)</li>
+            <li>Werkwoorden op -IR bevat 3 types:
                 <ol>
-                    <li>Type finir (bijv: Finir, Choisir, Grandir, ...</li>
-                    <li>Type Dormir (bijv: Dormir, Mentir, Partir, ...</li>
-                    <li>Type Ouvrir (bijv: Ouvrir, Offrir, Souffrir</li>
+                    <li>Type finir (bijv: Finir, Choisir, Grandir, ...)</li>
+                    <li>Type Dormir (bijv: Dormir, Mentir, Partir, ...)</li>
+                    <li>Type Ouvrir (bijv: Ouvrir, Offrir, Souffrir)</li>
                 </ol>
             </li>
             <li>Werkwoorden op -RE (bijv: Rendre, Vendre, Descendre, ...</li>
         </ol>
     </div>
+    
+
+    <div class="partContainer">
+        <h1>REGELMATIGE WERKWOORDEN</h1>
+    </div>
 
     <!-- Werkwoorden op -ER -->
     <div class="partContainer">
-        <h2>1. Werkwoorden op -ER</h2>
+        <h2 id="ERWerkwoorden">1. Werkwoorden op -ER</h2>
         <table>
             <tbody>
                 <tr>
@@ -91,13 +92,13 @@
         <h2>voorbeelden:</h2>
         <div class="voorbeelden">
             <div class="scroll-container">
-                <app-conjugaison-table verb="Formule" stem="stam" endingsType="ER"></app-conjugaison-table>
-                <app-conjugaison-table verb="Parler" stem="parl" endingsType ="ER"></app-conjugaison-table>
-                <app-conjugaison-table verb="Aimer" stem="aim" endingsType ="ER"></app-conjugaison-table>
-                <app-conjugaison-table verb="Chanter" stem="chant" endingsType ="ER"></app-conjugaison-table>
-                <app-conjugaison-table verb="Regarder" stem="regard" endingsType ="ER"></app-conjugaison-table>
-                <app-conjugaison-table verb="Entrer" stem="entr" endingsType ="ER"></app-conjugaison-table>
-                <app-conjugaison-table verb="Écouter" stem="ecout" endingsType ="ER"></app-conjugaison-table>
+                <app-conjugaison-table verb="Formule" stem="stam" endingsType="ER" dutchTranslation ="vertaling"></app-conjugaison-table>
+                <app-conjugaison-table verb="Parler" stem="parl" endingsType ="ER" dutchTranslation ="Praten"></app-conjugaison-table>
+                <app-conjugaison-table verb="Aimer" stem="aim" endingsType ="ER" dutchTranslation ="Houden van"></app-conjugaison-table>
+                <app-conjugaison-table verb="Chanter" stem="chant" endingsType ="ER" dutchTranslation ="Zingen"></app-conjugaison-table>
+                <app-conjugaison-table verb="Regarder" stem="regard" endingsType ="ER" dutchTranslation ="Kijken"></app-conjugaison-table>
+                <app-conjugaison-table verb="Entrer" stem="entr" endingsType ="ER" dutchTranslation ="Binnenkomen"></app-conjugaison-table>
+                <app-conjugaison-table verb="Écouter" stem="ecout" endingsType ="ER" dutchTranslation ="Luisteren"></app-conjugaison-table>
             </div>
         </div>
         <!-- Moet er beter uitzien -->
@@ -144,11 +145,11 @@
                 <h2>voorbeelden:</h2>
                 <div class="voorbeelden">
                     <div class="scroll-container">
-                        <app-conjugaison-table verb="Formule" stem="stam" endingsType="IRFinir"></app-conjugaison-table>
-                        <app-conjugaison-table verb="Finir" stem="fin" endingsType ="IRFinir"></app-conjugaison-table>
-                        <app-conjugaison-table verb="Choisir" stem="chois" endingsType ="IRFinir"></app-conjugaison-table>
-                        <app-conjugaison-table verb="Grandir" stem="grand" endingsType ="IRFinir"></app-conjugaison-table>
-                        <app-conjugaison-table verb="Maigrir" stem="maigr" endingsType ="IRFinir"></app-conjugaison-table>
+                        <app-conjugaison-table verb="Formule" stem="stam" endingsType="IRFinir" dutchTranslation ="vertaling"></app-conjugaison-table>
+                        <app-conjugaison-table verb="Finir" stem="fin" endingsType ="IRFinir" dutchTranslation ="Beëindigen"></app-conjugaison-table>
+                        <app-conjugaison-table verb="Choisir" stem="chois" endingsType ="IRFinir" dutchTranslation ="Kiezen"></app-conjugaison-table>
+                        <app-conjugaison-table verb="Grandir" stem="grand" endingsType ="IRFinir" dutchTranslation ="Groeien"></app-conjugaison-table>
+                        <app-conjugaison-table verb="Maigrir" stem="maigr" endingsType ="IRFinir" dutchTranslation ="Afvallen"></app-conjugaison-table>
                     </div>
                 </div>
             </div>
@@ -182,7 +183,7 @@
                         <app-conjugaison-table verb="Dormir" stem="dorm" endingsType ="IRDormir" dutchTranslation ="Slapen"></app-conjugaison-table>
                         <app-conjugaison-table verb="Mentir" stem="ment" endingsType ="IRDormir" dutchTranslation ="Liegen"></app-conjugaison-table>
                         <app-conjugaison-table verb="Sortir" stem="sort" endingsType ="IRDormir" dutchTranslation ="Uitgaan"></app-conjugaison-table>
-                        <app-conjugaison-table verb="Partir" stem="part" endingsType ="IRDormir" dutchTranslation ="vertrekken"></app-conjugaison-table>
+                        <app-conjugaison-table verb="Partir" stem="part" endingsType ="IRDormir" dutchTranslation ="Vertrekken"></app-conjugaison-table>
                     </div>
                 </div>
             </div>
@@ -206,10 +207,10 @@
                 <div class="voorbeelden">
                     <div class="scroll-container">
                         <app-conjugaison-table verb="Formule" stem="stam" endingsType="ER"  dutchTranslation ="vertaling"></app-conjugaison-table>
-                        <app-conjugaison-table verb="Ouvrir" stem="ouvr" endingsType ="IRDormir" dutchTranslation ="Openen"></app-conjugaison-table>
-                        <app-conjugaison-table verb="Offrir" stem="offr" endingsType ="IRDormir" dutchTranslation ="Aanbieden"></app-conjugaison-table>
-                        <app-conjugaison-table verb="Découvrir" stem="découvr" endingsType ="IRDormir"  dutchTranslation ="Ontdekken"></app-conjugaison-table>
-                        <app-conjugaison-table verb="Recouvrir" stem="revouvr" endingsType ="IRDormir" dutchTranslation ="Bedekken"></app-conjugaison-table>
+                        <app-conjugaison-table verb="Ouvrir" stem="ouvr" endingsType ="ER" dutchTranslation ="Openen"></app-conjugaison-table>
+                        <app-conjugaison-table verb="Offrir" stem="offr" endingsType ="ER" dutchTranslation ="Aanbieden"></app-conjugaison-table>
+                        <app-conjugaison-table verb="Découvrir" stem="découvr" endingsType ="ER"  dutchTranslation ="Ontdekken"></app-conjugaison-table>
+                        <app-conjugaison-table verb="Recouvrir" stem="recouvr" endingsType ="ER" dutchTranslation ="Bedekken"></app-conjugaison-table>
                     </div>
                 </div>
             </div>
@@ -218,7 +219,7 @@
 
     <!-- Werkwoorden op -RE -->
     <div class="partContainer">
-        <h2>3. Werkwoorden op -ER</h2>
+        <h2>3. Werkwoorden op -RE</h2>
         <table>
             <tbody>
                 <tr>
@@ -243,7 +244,158 @@
             </div>
         </div>
     </div>
-    <!-- redirect naar die grammaire pagina. -->
-    <a href="">Meer over wederkerende werkwoorden in de tegenwoordige tijd</a>
 
+    <div class="partContainer">
+        <h1>ONREGELMATIGE WERKWOORDEN</h1>
+    </div>
+
+    <div class="partContainer">
+        <p>Onregelmatige werkwoorden volgen geen vaste regel dus moet je deze van buiten leren.</p>
+        <div class="scroll-container">
+            <app-conjugaison-irreg-table verb="Aller" dutchTranslation="Gaan" [conjugations]="{
+              je: 'vais',
+              tu: 'vas',
+              il: 'va',
+              nous: 'allons',
+              vous: 'allez',
+              ils: 'vont',
+            }">
+          </app-conjugaison-irreg-table>
+          <app-conjugaison-irreg-table verb="Avoir" dutchTranslation="Hebben" [conjugations]="{
+            je: 'ai',
+            tu: 'as',
+            il: 'a',
+            nous: 'avons',
+            vous: 'avez',
+            ils: 'ont',
+          }">
+          </app-conjugaison-irreg-table>
+          <app-conjugaison-irreg-table verb="Connaître" dutchTranslation="Kennen" [conjugations]="{
+            je: 'connais',
+            tu: 'connais',
+            il: 'connaît',
+            nous: 'connaissons',
+            vous: 'connaissez',
+            ils: 'connaissent',
+          }">
+          </app-conjugaison-irreg-table>         
+          <app-conjugaison-irreg-table verb="Devoir" dutchTranslation="Moeten" [conjugations]="{
+            je: 'dois',
+            tu: 'dois',
+            il: 'doit',
+            nous: 'devons',
+            vous: 'devez',
+            ils: 'doivent'
+          }">
+          </app-conjugaison-irreg-table>         
+          <app-conjugaison-irreg-table verb="Dire" dutchTranslation="Zeggen" [conjugations]="{
+            je: 'dis',
+            tu: 'dis',
+            il: 'dit',
+            nous: 'disons',
+            vous: 'dites',
+            ils: 'disent'
+          }">
+          </app-conjugaison-irreg-table>        
+          <app-conjugaison-irreg-table verb="Être" dutchTranslation="Zijn" [conjugations]="{
+            je: 'suis',
+            tu: 'es',
+            il: 'est',
+            nous: 'sommes',
+            vous: 'êtes',
+            ils: 'sont'
+          }">
+          </app-conjugaison-irreg-table>
+          <app-conjugaison-irreg-table verb="Faire" dutchTranslation="Maken, doen" [conjugations]="{
+            je: 'fais',
+            tu: 'fais',
+            il: 'fait',
+            nous: 'faisons',
+            vous: 'faites',
+            ils: 'font'
+          }">
+          </app-conjugaison-irreg-table>
+          <app-conjugaison-irreg-table verb="Falloir" dutchTranslation="Moeten" [conjugations]="{
+            je: '',
+            tu: '',
+            il: 'faut',
+            nous: '',
+            vous: '',
+            ils: ''
+          }">
+          </app-conjugaison-irreg-table>         
+          <app-conjugaison-irreg-table verb="Lire" dutchTranslation="Lezen" [conjugations]="{
+            je: 'lis',
+            tu: 'lis',
+            il: 'lit',
+            nous: 'lisons',
+            vous: 'lisez',
+            ils: 'lisent'
+          }">
+          </app-conjugaison-irreg-table>
+          <app-conjugaison-irreg-table verb="Mettre" dutchTranslation="Zetten, leggen" [conjugations]="{
+            je: 'mets',
+            tu: 'mets',
+            il: 'met',
+            nous: 'mettons',
+            vous: 'mettez',
+            ils: 'mettent'
+          }">
+          </app-conjugaison-irreg-table>              
+          <app-conjugaison-irreg-table verb="Pouvoir" dutchTranslation="Kunnen, mogen" [conjugations]="{
+            je: 'peux',
+            tu: 'peux',
+            il: 'peut',
+            nous: 'pouvons',
+            vous: 'pouvez',
+            ils: 'peuvent'
+          }">
+          </app-conjugaison-irreg-table>
+          <app-conjugaison-irreg-table verb="Recevoir" dutchTranslation="Ontvangen" [conjugations]="{
+            je: 'reçois',
+            tu: 'reçois',
+            il: 'reçoit',
+            nous: 'recevons',
+            vous: 'recevez',
+            ils: 'recoivent'
+          }">
+          </app-conjugaison-irreg-table>
+          <app-conjugaison-irreg-table verb="Savoir" dutchTranslation="Weten" [conjugations]="{
+            je: 'sais',
+            tu: 'sais',
+            il: 'sait',
+            nous: 'savons',
+            vous: 'savez',
+            ils: 'savent'
+          }">
+          </app-conjugaison-irreg-table>
+          <app-conjugaison-irreg-table verb="(De)venir" dutchTranslation="Komen (worden)" [conjugations]="{
+            je: '(de)viens',
+            tu: '(de)viens',
+            il: '(de)vient',
+            nous: '(de)venons',
+            vous: '(de)venez',
+            ils: '(de)viennent'
+          }">
+          </app-conjugaison-irreg-table>
+          <app-conjugaison-irreg-table verb="Voir" dutchTranslation="Zien" [conjugations]="{
+            je: 'vois',
+            tu: 'vois',
+            il: 'voit',
+            nous: 'voyons',
+            vous: 'voyez',
+            ils: 'voient'
+          }">
+          </app-conjugaison-irreg-table>
+          <app-conjugaison-irreg-table verb="Vouloir" dutchTranslation="Willen" [conjugations]="{
+            je: 'veux',
+            tu: 'veux',
+            il: 'veut',
+            nous: 'voulons',
+            vous: 'voulez',
+            ils: 'voulent'
+          }">
+          </app-conjugaison-irreg-table>         
+        </div>
+    </div>
 </div>

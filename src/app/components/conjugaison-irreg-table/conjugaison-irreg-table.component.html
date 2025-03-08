@@ -1,0 +1,13 @@
+<table>
+    <thead>
+      <tr>
+        <th colspan="4">{{ verb }} ({{ dutchTranslation }})</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let pronoun of pronouns">
+        <td>{{ pronoun.label }}</td>
+        <td>{{ conjugations[pronoun.key] || '' }}</td>
+      </tr>
+    </tbody>
+</table>
