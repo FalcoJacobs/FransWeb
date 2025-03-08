@@ -1,4 +1,249 @@
-<h1>Present</h1>
-<main>
-    
-</main>
+<div class="contentWrapper">
+
+    <h1>Indicatif présent</h1>
+    <h3>(tegenwoordige tijd)</h3>
+    <p>Als er iets nu, op dit moment afspeelt is dat in de tegenwoordige tijd.</p>
+
+    <!-- Onderwerp -->
+    <div class="partContainer">
+        <table>
+            <thead>
+                <tr>
+                    <th colspan="3">Het onderwerp (Le sujet)</th>
+                </tr>
+                <tr>
+                    <th>Persoon</th>
+                    <th>Nederlands</th>
+                    <th>Frans</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1e enkelvoud</td>
+                    <td>Ik</td>
+                    <td>Je</td>
+                </tr>
+                <tr>
+                    <td>2e enkelvoud</td>
+                    <td>Jij</td>
+                    <td>Tu</td>
+                </tr>
+                <tr>
+                    <td>3e enkelvoud</td>
+                    <td>Hij</td>
+                    <td>Il</td>
+                </tr>
+                <tr>
+                    <td>3e enkelvoud</td>
+                    <td>Zij</td>
+                    <td>Elle</td>
+                </tr>
+                <tr>
+                    <td>1e meervoud</td>
+                    <td>Wij</td>
+                    <td>Nous</td>
+                </tr>
+                <tr>
+                    <td>2e meervoud</td>
+                    <td>Jullie / U</td>
+                    <td>Vous</td>
+                </tr>
+                <tr>
+                    <td>3e meervoud</td>
+                    <td>Zij</td>
+                    <td>Ils / Elles</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- De verschillende soorten werkwoorden -->
+    <div class="partContainer">
+        <h2>Er zijn 3 verschillende soorten werkwoorden:</h2>
+        <ol>
+            <li>Werkwoorden op -ER (bijv: Parler, Aimer, Donner, ...</li>
+            <li>Werkwoorden op -IR (bevat 3 types:
+                <ol>
+                    <li>Type finir (bijv: Finir, Choisir, Grandir, ...</li>
+                    <li>Type Dormir (bijv: Dormir, Mentir, Partir, ...</li>
+                    <li>Type Ouvrir (bijv: Ouvrir, Offrir, Souffrir</li>
+                </ol>
+            </li>
+            <li>Werkwoorden op -RE (bijv: Rendre, Vendre, Descendre, ...</li>
+        </ol>
+    </div>
+
+    <!-- Werkwoorden op -ER -->
+    <div class="partContainer">
+        <h2>1. Werkwoorden op -ER</h2>
+        <table>
+            <tbody>
+                <tr>
+                    <td>Formule: </td>
+                    <td>Stam + uitgangen</td>
+                </tr>
+                <tr>
+                    <td>Stam:</td>
+                    <td>Infinitief - ER</td>
+                </tr>
+            </tbody>
+        </table>
+        <h2>voorbeelden:</h2>
+        <div class="voorbeelden">
+            <div class="scroll-container">
+                <app-conjugaison-table verb="Formule" stem="stam" endingsType="ER"></app-conjugaison-table>
+                <app-conjugaison-table verb="Parler" stem="parl" endingsType ="ER"></app-conjugaison-table>
+                <app-conjugaison-table verb="Aimer" stem="aim" endingsType ="ER"></app-conjugaison-table>
+                <app-conjugaison-table verb="Chanter" stem="chant" endingsType ="ER"></app-conjugaison-table>
+                <app-conjugaison-table verb="Regarder" stem="regard" endingsType ="ER"></app-conjugaison-table>
+                <app-conjugaison-table verb="Entrer" stem="entr" endingsType ="ER"></app-conjugaison-table>
+                <app-conjugaison-table verb="Écouter" stem="ecout" endingsType ="ER"></app-conjugaison-table>
+            </div>
+        </div>
+        <!-- Moet er beter uitzien -->
+        <h2>Spellings uitzonderingen voor werkwoorden op -ER</h2>
+        <ul>
+            <li>Voor -ons:
+                <ul>
+                    <li>c --> ç (commencer)</li>
+                    <li>g --> ge (manger)</li>
+                </ul>
+            </li>
+            <li>Voor een doffe e:
+                <ul>
+                    <li>Y --> i (nettoyer)</li>
+                    <li>e --> è (acheter)</li>
+                    <li>é --> è (céder)</li>
+                    <li>l --> ll (appeler)</li>
+                    <li>t --> tt (jeter)</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <!-- Werkwoorden op -IR -->
+    <div class="partContainer">
+        <h2>Werkwoorden op -IR</h2>
+        <p>Voor werkwoorden op -IR zijn er 3 verschillende types.</p>
+        <div class="irWerkwoordTypes">
+            <div class="typeFinir">
+                <h3>Type Finir</h3>
+                <p>(Meest voorkomen type)</p>
+                <table>
+                    <tbody>
+                        <tr>
+                            <td>Formule: </td>
+                            <td>Stam + uitgangen</td>
+                        </tr>
+                        <tr>
+                            <td>Stam:</td>
+                            <td>Infinitief - IR</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <h2>voorbeelden:</h2>
+                <div class="voorbeelden">
+                    <div class="scroll-container">
+                        <app-conjugaison-table verb="Formule" stem="stam" endingsType="IRFinir"></app-conjugaison-table>
+                        <app-conjugaison-table verb="Finir" stem="fin" endingsType ="IRFinir"></app-conjugaison-table>
+                        <app-conjugaison-table verb="Choisir" stem="chois" endingsType ="IRFinir"></app-conjugaison-table>
+                        <app-conjugaison-table verb="Grandir" stem="grand" endingsType ="IRFinir"></app-conjugaison-table>
+                        <app-conjugaison-table verb="Maigrir" stem="maigr" endingsType ="IRFinir"></app-conjugaison-table>
+                    </div>
+                </div>
+            </div>
+            <div class="typeDormir">
+                <h3>Type Dormir</h3>
+                <p>Dit type is voor de werkwoorden uit MeSeSeSoDoPa.</p>
+                <p>MeSeSeSoDoPa = Mentir , Sentir , Servir , Sortir , Dormir en Partir</p>
+                <table>
+                    <tbody>
+                        <tr>
+                            <td>Formule: </td>
+                            <td>Enkelvoud:</td>
+                            <td>Stam - laatste letter + uitgangen</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>Meervoud:</td>
+                            <td>Stam + Zelfde uitgangen ER</td>
+                        </tr>
+                        <tr>
+                            <td>Stam:</td>
+                            <td></td>
+                            <td>Infinitief - IR</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <h2>voorbeelden:</h2>
+                <div class="voorbeelden">
+                    <div class="scroll-container">
+                        <app-conjugaison-table verb="Formule" stem="stam" endingsType="IRDormir" dutchTranslation ="vertaling"></app-conjugaison-table>
+                        <app-conjugaison-table verb="Dormir" stem="dorm" endingsType ="IRDormir" dutchTranslation ="Slapen"></app-conjugaison-table>
+                        <app-conjugaison-table verb="Mentir" stem="ment" endingsType ="IRDormir" dutchTranslation ="Liegen"></app-conjugaison-table>
+                        <app-conjugaison-table verb="Sortir" stem="sort" endingsType ="IRDormir" dutchTranslation ="Uitgaan"></app-conjugaison-table>
+                        <app-conjugaison-table verb="Partir" stem="part" endingsType ="IRDormir" dutchTranslation ="vertrekken"></app-conjugaison-table>
+                    </div>
+                </div>
+            </div>
+            <div class="typeOuvrir">
+                <h3>Type Ouvrir</h3>
+                <p>Dit type wordt gebruikt voor werkwoorden dat eindigen op -vrir en -frir .</p>
+                <p>Deze worden op de zelfde manier als -ER werkwoorden vervoegd.</p>
+                <table>
+                    <tbody>
+                        <tr>
+                            <td>Formule: </td>
+                            <td>Stam + uitgangen</td>
+                        </tr>
+                        <tr>
+                            <td>Stam:</td>
+                            <td>Infinitief - IR</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <h2>voorbeelden:</h2>
+                <div class="voorbeelden">
+                    <div class="scroll-container">
+                        <app-conjugaison-table verb="Formule" stem="stam" endingsType="ER"  dutchTranslation ="vertaling"></app-conjugaison-table>
+                        <app-conjugaison-table verb="Ouvrir" stem="ouvr" endingsType ="IRDormir" dutchTranslation ="Openen"></app-conjugaison-table>
+                        <app-conjugaison-table verb="Offrir" stem="offr" endingsType ="IRDormir" dutchTranslation ="Aanbieden"></app-conjugaison-table>
+                        <app-conjugaison-table verb="Découvrir" stem="découvr" endingsType ="IRDormir"  dutchTranslation ="Ontdekken"></app-conjugaison-table>
+                        <app-conjugaison-table verb="Recouvrir" stem="revouvr" endingsType ="IRDormir" dutchTranslation ="Bedekken"></app-conjugaison-table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Werkwoorden op -RE -->
+    <div class="partContainer">
+        <h2>3. Werkwoorden op -ER</h2>
+        <table>
+            <tbody>
+                <tr>
+                    <td>Formule: </td>
+                    <td>Stam + uitgangen</td>
+                </tr>
+                <tr>
+                    <td>Stam:</td>
+                    <td>Infinitief - RE</td>
+                </tr>
+            </tbody>
+        </table>
+        <h2>voorbeelden:</h2>
+        <div class="voorbeelden">
+            <div class="scroll-container">
+                <app-conjugaison-table verb="Formule" stem="stam" endingsType="RE" dutchTranslation ="vertaling"></app-conjugaison-table>
+                <app-conjugaison-table verb="Attendre" stem="attend" endingsType ="RE" dutchTranslation ="Wachten"></app-conjugaison-table>
+                <app-conjugaison-table verb="Vendre" stem="vend" endingsType ="RE" dutchTranslation ="Verkopen"></app-conjugaison-table>
+                <app-conjugaison-table verb="Perdre" stem="perd" endingsType ="RE" dutchTranslation ="Verliezen"></app-conjugaison-table>
+                <app-conjugaison-table verb="Rendre" stem="rend" endingsType ="RE" dutchTranslation ="Teruggeven"></app-conjugaison-table>
+                <app-conjugaison-table verb="Fondre" stem="fond" endingsType ="RE" dutchTranslation ="Smelten"></app-conjugaison-table>
+            </div>
+        </div>
+    </div>
+    <!-- redirect naar die grammaire pagina. -->
+    <a href="">Meer over wederkerende werkwoorden in de tegenwoordige tijd</a>
+
+</div>

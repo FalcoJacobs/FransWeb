@@ -31,6 +31,7 @@ import { SubjonctifPresentComponent } from './pages/grammaire-pages/subjonctif-p
 
 import { ConjugaisonSelectComponent } from './pages/conjugaison-select/conjugaison-select.component';
 import { ConjugaisonTestComponent } from './pages/conjugaison-test/conjugaison-test.component';
+import { TenseExerciseComponent } from './pages/tense-exercise/tense-exercise.component';
 
 import { ClassementComponent } from './pages/classement/classement.component';
 import { ConjugaisonResultComponent } from './pages/conjugaison-result/conjugaison-result.component';
@@ -76,6 +77,7 @@ export const routes: Routes = [
             { path: 'conjugaison/select', component: ConjugaisonSelectComponent},
             { path: 'conjugaison/test', component: ConjugaisonTestComponent},
             { path: 'conjugaison/test-results', component: ConjugaisonResultComponent},
+            { path: 'conjugaison/tense-exercise', component: TenseExerciseComponent},
 
             { path: 'classement', component: ClassementComponent},
 

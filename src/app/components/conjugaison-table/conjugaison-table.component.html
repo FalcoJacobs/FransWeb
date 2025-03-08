@@ -1,0 +1,16 @@
+<table>
+    <thead>
+      <tr>
+        <th colspan="4">{{ verb }} ({{ dutchTranslation }})</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let pronoun of pronouns; let i = index">
+        <td>{{ pronoun }}</td>
+        <td>{{ endingsType === 'IRDormir' && i <= 2 ? stem.slice(0, -1) : stem }}</td>
+        <td>+</td>
+        <td>{{ endings[i] }}</td>
+      </tr>
+    </tbody>
+  </table>
+  
