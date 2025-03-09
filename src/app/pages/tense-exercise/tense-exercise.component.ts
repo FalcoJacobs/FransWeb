@@ -34,13 +34,16 @@ export class TenseExerciseComponent {
     const randomSentenceIndex = Math.floor(Math.random() * randomTense.sentences.length);
     const randomSentence = randomTense.sentences[randomSentenceIndex];
 
-    if (Math.random() > 0.5){
-      this.currentSentence = randomSentence.dutch;
-      this.currentTranslation = randomSentence.french;
-    }else{
-      this.currentSentence = randomSentence.french;
-      this.currentTranslation = randomSentence.dutch;
-    }
+    // if (Math.random() > 0.5){
+    //   this.currentSentence = randomSentence.dutch;
+    //   this.currentTranslation = randomSentence.french;
+    // }else{
+    //   this.currentSentence = randomSentence.french;
+    //   this.currentTranslation = randomSentence.dutch;
+    // }
+    
+    this.currentSentence = randomSentence.french;
+    this.currentTranslation = randomSentence.dutch;
     this.currentTense = randomTense.tense;
 
     this.options = tenseExercise.map(tense => tense.tense);

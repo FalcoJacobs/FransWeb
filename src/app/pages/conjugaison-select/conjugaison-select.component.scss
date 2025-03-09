@@ -12,10 +12,9 @@
         text-align: center;
         a{
             color: var(--font-color);
-            text-decoration-color: var(--background-color);
             transition: .5s;
             &:hover{
-                text-decoration-color: var(--font-color);
+                text-shadow: rgb(255, 255, 255) 1px 0 5px;
             }
         }
     }
