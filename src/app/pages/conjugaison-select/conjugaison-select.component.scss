@@ -10,6 +10,14 @@
     h2{
         font-size: 25px;
         text-align: center;
+        a{
+            color: var(--font-color);
+            text-decoration-color: var(--background-color);
+            transition: .5s;
+            &:hover{
+                text-decoration-color: var(--font-color);
+            }
+        }
     }
     form{
         overflow-y: auto;

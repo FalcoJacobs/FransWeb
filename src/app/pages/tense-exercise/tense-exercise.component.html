@@ -1,1 +1,15 @@
-<p>tense-exercise works!</p>
+<div class="contentWrapper">
+    <h1>In welke tijd staat de volgende zin?</h1>
+    <h2>{{ currentSentence }}</h2>
+
+    <div class="buttonContainer">
+      <button *ngFor="let option of options" (click)="checkAnswer(option)">{{ option }}</button>
+    </div>
+
+    <div class="stats">
+        <h1 [ngClass]="isCorrect === true ? 'correct' : isCorrect === false ? 'incorrect' : ''">{{  isCorrect === null ? '...' : (isCorrect ? 'Juist' : 'Fout')  }}</h1>
+        <p><span>Correct: </span> <span>{{accuracy}}%</span> <span>({{totalCorrect}} / {{totalCorrect + totalIncorrect}})</span></p>
+        <p><span>{{ previousSentence || '...' }}</span> = <span>{{ previousTense || '...' }}</span></p>
+        <p><span class="lowOp">Vertaling: </span><span>{{ previousTranslation  || '...' }}</span></p>
+    </div>
+</div>
