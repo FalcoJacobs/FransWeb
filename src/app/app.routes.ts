@@ -41,6 +41,8 @@ import { SettingsComponent } from './pages/settings/settings.component';
 import { PersonalDictionairyComponent } from './pages/personal-dictionary/personal-dictionary.component';
 import { VerbMasteriesComponent } from './pages/verb-masteries/verb-masteries.component';
 
+import { JeuxComponent } from './pages/jeux/jeux.component';
+
 export const routes: Routes = [
     { path:'', component: HomeComponent},
     { path:'login', component: LoginComponent},
@@ -84,7 +86,9 @@ export const routes: Routes = [
             { path: 'profile', component: ProfileComponent},
             { path: 'profile/settings', component: SettingsComponent},
             { path: 'personal-dictionary', component: PersonalDictionairyComponent},
-            { path: 'verb-masteries', component: VerbMasteriesComponent}
+            { path: 'verb-masteries', component: VerbMasteriesComponent},
+
+            { path: 'jeux', component: JeuxComponent},
         ]
     }
 ];
