@@ -36,4 +36,8 @@ export class VocabulaireResultComponent {
       });
       console.log(this.mistakes)
     }
+    
+  notYetFunction(){
+    alert('deze functie werkt nog niet, dit is nog maar een test release');
+  }
 }

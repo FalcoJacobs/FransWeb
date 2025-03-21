@@ -7,5 +7,7 @@ import { Component } from '@angular/core';
   styleUrl: './home.component.scss'
 })
 export class HomeComponent {
-
+  notYetFunction(){
+    alert('deze functie werkt nog niet, dit is nog maar een test release');
+  }
 }

@@ -26,7 +26,7 @@ export class LoginComponent {
         password: this.loginform.controls.password.value ?? ''
       };
 
-      if (model.email === 'test@mail.com' && model.password === 'password'){
+      if (model.email === 'test@mail.com' && model.password === 'wachtwoord'){
         localStorage.setItem('user', JSON.stringify(model));
         this.router.navigate(['home']);
       }else{

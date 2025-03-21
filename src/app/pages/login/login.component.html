@@ -1,6 +1,7 @@
 <div class="backlink">
     <a routerLink=""><svg xmlns="http://www.w3.org/2000/svg" height="60px" viewBox="0 -960 960 960" width="60px" fill="#e8eaed"><path d="M560-240 320-480l240-240 56 56-184 184 184 184-56 56Z"/></svg></a>
 </div>
+<p>Momenteel zijn algemene inloggegevens: Email: test&#64;mail.com en Wachtwoord: wachtwoord</p>
 <div class="signUpContainer">
     <h1>Login</h1>
     <form [formGroup]="loginform" (ngSubmit)="loginSubmit()">
@@ -9,7 +10,7 @@
             <input type="email" id="email" formControlName="email" autocomplete="off" required>
         </div>
         <div class="formElement">
-            <label for="password">Password: </label>
+            <label for="password">Wachtwoord: </label>
             <input type="password" id="password" formControlName="password" autocomplete="off" required>
         </div>
         <button type="submit" [disabled]="loginform.invalid">Login</button>
