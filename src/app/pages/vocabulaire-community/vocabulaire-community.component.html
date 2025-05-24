@@ -1,3 +1,24 @@
-
-<p>deze functie werkt nog niet, dit is nog maar een test release.</p>
-<p>De bedoeling is dat mensen hier hun eigen woordenlijsten makkelijk kunnen publiceren om te oefenen en met andere mensen te delen.</p>
+<h5>Ondanks mogelijke synoniemen worden enkel de opgegeven antwoorden als correct beschouwd. (Houd hier rekening mee bij het maken en gebruiken van de woordenlijsten.)</h5>
+<div class="searchbar">
+    <input type="text" id="searchbar" class="searchTextBar" placeholder="Recherche" (input)="OnSearchChange($event)" autocomplete="off" (keydown)="onKeyPress($event)">
+    <ul *ngIf="showResults" class="search-results">
+      <li *ngFor="let item of filteredItems" (click)="selectItem(item)">{{ item.name }} {{ item.translation }} - Niveau: {{ item.level }}</li>
+    </ul>
+</div>
+    <button [routerLink]="['/home/vocabulaire/community/list-creation']">Maak een nieuwe lijst</button>
+<main>
+    <div class="vocabulaire">
+        <div *ngFor="let category of vocabulaireCategories" class="category">
+          <h2>{{ category.category }}</h2>
+          <div class="scroll-container">
+            <div *ngFor="let item of category.items" class="vocabulaire-item">
+              <h3>{{ item.name }}</h3>
+              <p>{{ item.translation }}</p>
+              <span class="level">Lijst lengte: {{ item.wordCount }} woorden</span>
+              <span class="level">Werkelijke bruikbaarheid: {{ item.usability }}</span>
+              <a [routerLink]="['/home/vocabulaire/test-options']" [queryParams]="{ list: item.id }">Selecteer lijst</a>
+            </div>
+          </div>
+        </div>
+    </div>
+</main>

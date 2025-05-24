@@ -15,6 +15,7 @@ import { LoggedInLayoutComponent } from './layouts/logged-in-layout/logged-in-la
 import { VocabulaireComponent } from './pages/vocabulaire/vocabulaire.component';
 import { VocabulaireOfficialComponent } from './pages/vocabulaire-official/vocabulaire-official.component';
 import { VocabulaireCommunityComponent } from './pages/vocabulaire-community/vocabulaire-community.component';
+import { VocabulaireListCreationComponent } from './pages/vocabulaire-list-creation/vocabulaire-list-creation.component';
 import { VocabulaireTestOptionsComponent } from './pages/vocabulaire-test-options/vocabulaire-test-options.component';
 import { VocabulaireTestComponent } from './pages/vocabulaire-test/vocabulaire-test.component';
 import { VocabulaireResultComponent } from './pages/vocabulaire-result/vocabulaire-result.component';
@@ -58,6 +59,7 @@ export const routes: Routes = [
             { path: 'vocabulaire', component: VocabulaireComponent},
             { path: 'vocabulaire/official', component: VocabulaireOfficialComponent},
             { path: 'vocabulaire/community', component: VocabulaireCommunityComponent},
+            { path: 'vocabulaire/community/list-creation', component: VocabulaireListCreationComponent},
             { path: 'vocabulaire/test-options', component: VocabulaireTestOptionsComponent},
             { path: 'vocabulaire/test', component: VocabulaireTestComponent},
             { path: 'vocabulaire/test-results', component: VocabulaireResultComponent},
