@@ -1,21 +1,7 @@
 export const vocabulaireCategories = [
     {
-        category: "Veel voorkomend",
+        category: "Zelf Aangemaakte lijsten",
         items: [
-            {
-                name: "100 verbes les plus courants",
-                translation: "100 meest voorkomende werkwoorden",
-                wordCount: 100,
-                usability: 'hoog (not determined)',
-                id: 'most-common-verbes'
-            },
-            {
-                name: "100 verbes les plus courants",
-                translation: "100 meest voorkomende werkwoorden",
-                wordCount: 100,
-                usability: 'hoog (not determined)',
-                id: 'most-common-verbes'
-            },
             {
                 name: "100 verbes les plus courants",
                 translation: "100 meest voorkomende werkwoorden",
@@ -26,7 +12,7 @@ export const vocabulaireCategories = [
         ],
     },
     {
-        category: "Veel voorkomend",
+        category: "Meest gebruikte lijsten",
         items: [
             {
                 name: "100 verbes les plus courants",
@@ -35,13 +21,11 @@ export const vocabulaireCategories = [
                 usability: 'hoog (not determined)',
                 id: 'most-common-verbes'
             },
-            {
-                name: "100 verbes les plus courants",
-                translation: "100 meest voorkomende werkwoorden",
-                wordCount: 100,
-                usability: 'hoog (not determined)',
-                id: 'most-common-verbes'
-            },
+        ],
+    },
+    {
+        category: "Hoogst scorende lijsten",
+        items: [
             {
                 name: "100 verbes les plus courants",
                 translation: "100 meest voorkomende werkwoorden",

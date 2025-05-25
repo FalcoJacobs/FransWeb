@@ -15,6 +15,12 @@
             <input type="checkbox" [(ngModel)]="herhaalFouten"> Herhaal fouten <em>( + 10% xp )</em>
         </label>
         <button (click)="startTest()">Start Test</button>
+        <div>
+            <button (click)="generatePDF(false)">Maak PDF oefeningen blad</button>
+        </div>
+        <div>
+            <button (click)="generatePDF()">Maak PDF antwoorden blad</button>
+        </div>
     </div>
     <!-- De optie voor eigen soudeffects te kiezen -->
 </div>

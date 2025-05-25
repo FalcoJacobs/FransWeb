@@ -38,6 +38,10 @@ export class VocabulaireListCreationComponent {
     if(this.rows.length > 1){
       this.rows.pop();
     }
+    setTimeout(() => {
+      const firstInput = this.dutchInputs.toArray().at(-1);
+      firstInput?.nativeElement.focus();
+    });
   }
   
   onEnter(event: Event) {
