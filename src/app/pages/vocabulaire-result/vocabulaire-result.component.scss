@@ -64,3 +64,19 @@ h1{
         }
     }
 }
+@media only screen and (max-width: 600px) {
+    .statistieken{
+        width: 80vw;
+    }
+    .oefeningenLijst{
+        width: fit-content;
+        max-width: 95vw;
+        display: block;
+        overflow-x: scroll;
+        table{
+            td{
+                font-size: 14px;
+            }
+        }
+    }
+}

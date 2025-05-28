@@ -55,3 +55,43 @@
         }
     }
 }
+
+@media only screen and (max-width: 1500px) {
+    .leaderboardWrapper{
+        width: 98vw;
+        padding: 2% 2%;
+        margin: 3vh auto;
+        .leaderboardOptions{
+            display: block;
+            a{
+                background-color: var(--background-color);
+                padding: .2% 0%;
+                font-size: 15px;
+                display: block;
+                text-align: center;
+            }
+        }
+        .leaderboard{
+            h1{
+                font-size: 20px;
+                text-align: center;
+                margin: 1.5vh 0 1vh;
+            }
+            table{
+                margin: 1vh auto;
+                border-collapse: collapse;
+                border: 1px solid var(--font-color);
+                th{
+                    font-size: 16px;
+                    background-color: var(--accent-background-color);
+                }
+                td{
+                    font-size: 15px;
+                }
+                td, th{
+                    width: 12vw;
+                }
+            }
+        }
+    }
+}

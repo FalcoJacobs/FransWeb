@@ -16,5 +16,6 @@ export class HeaderComponent {
     localStorage.removeItem('user');
     this.router.navigate(['/login']);
   }
+  isMenuOpen = false;
 
 }

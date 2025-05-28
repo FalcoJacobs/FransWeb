@@ -58,3 +58,27 @@
         }
     }
 }
+
+
+@media only screen and (max-width: 600px) {
+    .testContainer{
+        width: 100vw;
+        margin: 4vh 0;
+    }
+    .testInputContainer{
+        width: fit-content;
+        margin: 0 auto;
+        text-align: center;
+        label{
+            font-size: 25px;
+        }
+        input{
+            display: block;
+            font-size: 25px;
+            margin: 0 auto;
+        }
+    }
+    .testResults{
+        min-width: 100%;
+    }
+}

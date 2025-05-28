@@ -129,4 +129,34 @@ main{
     }
 
 }
-  
+@media only screen and (max-width: 600px) {
+  main{
+    .category {      
+        margin-bottom: 3vh;
+        h2 {
+          font-size: 25px;
+        }
+        .vocabulaire-item {
+          min-width: max(20vw, 220px);
+          h3{
+            font-size: 22px;
+          }
+          p{
+            font-size: 17px;
+          }
+          a{
+            font-size: 18px;
+          }
+          .vocabContentLink{
+            font-size: 15px;
+          }
+        }
+      
+        .level {
+          display: block;
+          font-size: 15px;
+        }
+    }
+
+  }
+}

@@ -54,3 +54,37 @@
         }
     }
 }
+
+@media only screen and (max-width: 600px) {
+    .vocabulaireInput{
+        width: 98vw;
+        h1{
+            font-size:25px;
+        }
+        input{
+            margin: 2vh auto 1vh;
+            display: block;
+            font-size: 20px;
+            min-width: max(65vw, 100px);
+        }
+    }
+    .stats{
+        width: 98vw;
+        h1{
+            font-size: 25px;
+        }
+        h2{
+            font-size: 22px;
+        }
+        span{
+            p{
+                font-size: 20px;
+            }
+        }
+        table{
+            td{
+                font-size: 20px;
+            }
+        }
+    }
+}
