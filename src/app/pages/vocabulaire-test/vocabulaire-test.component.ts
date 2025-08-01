@@ -27,6 +27,8 @@ export class VocabulaireTestComponent {
   totalIncorrect: number = 0;
   accuracy: number = 0;
   mistakesAdded: number = 0;
+  currentStreak: number = 0;
+  highestStreak: number = 0;
 
   previousDutch: string = "";
   previousFrench: string = "";
@@ -103,8 +105,13 @@ export class VocabulaireTestComponent {
     if (isCorrect){
       this.correctAudio.play();
       this.totalCorrect++;
+      this.currentStreak++
+      if(this.currentStreak > this.highestStreak){
+        this.highestStreak = this.currentStreak;
+      }
     } else {
       this.incorrectAudio.play();
+      this.currentStreak = 0;
       // en dan de juiste uitspraak audio afspelen
       if (this.herhaalFouten){
         this.availableWords.push(this.currentWord);
