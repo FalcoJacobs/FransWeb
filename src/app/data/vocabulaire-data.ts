@@ -125,11 +125,18 @@ export const vocabulaireCategories = [
             {
                 name: "124",
                 translation: '',
-                wordCount: 46,
+                wordCount: 52,
                 usability: 'not determined',
                 id: 'lernova-6d-124'
             },
-        ]
+            {
+                name: "Verbes de base",
+                translation: 'fundamentele werkwoorden',
+                wordCount: 0,
+                usability: 'not determined',
+                id: '6d-lernova-verbes-de-base'
+            },
+        ],
     },
     {
         category: "Examen",
@@ -1071,9 +1078,22 @@ export const vocabLists: VocabLists = {
             { dutch: 'op zijn gemak zijn', french: 'être à l\'aise'},
             { dutch: 'zich op zijn gemak voelen', french: 'se sentir à l\'aise'},
             { dutch: 'de sprong wagen', french: 'sauter le pas'},
-            { dutch: 'vrienden maken', french: 'se fair des amis'},
+            { dutch: 'vrienden maken', french: 'se faire des amis'},
             { dutch: 'voor altijd', french: 'à tout jamais'},
             { dutch: 'vlot spreken', french: 'parler couramment'},
+        ]},
+    "6d-lernova-verbes-de-base": {
+        id: "6d-lernova-verbes-de-base",
+        name: "Verbes de base 6d",
+        words: [
+            { dutch: ['regelen', ' oplossen'], french: 's\'arranger'},
+            { dutch: 'zich vervelen' , french: 's\'ennuyer'},
+            { dutch: 'uitoefenen' , french: 'exercer'},
+            { dutch: 'verplaatsen' , french: 'déplacer'},
+            { dutch: 'zich onderscheiden' , french: 'se différencier'},
+            { dutch: 'ruzie maken' , french: 'se disputer'},
+            { dutch: 'wandelen' , french: 'se promener'},
+            { dutch: 'zich vervelen' , french: 's\'ennuyer'},
         ]},
     "couleurs": {
         id: "couleurs",
