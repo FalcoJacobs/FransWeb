@@ -12,12 +12,12 @@ import { ThemeService } from '../../services/theme.service';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent {
-  themes: string[] = [];
+  themes: { id: string; label: string }[] = [];
   currentTheme: string | null = null;
 
   constructor(private router: Router, private themeService: ThemeService) {
-    this.themes = this.themeService.themes;
-    this.currentTheme = this.themeService.getTheme() ?? this.themes[0];
+    this.themes = this.themeService.themes as { id: string; label: string }[];
+    this.currentTheme = this.themeService.getTheme() ?? this.themes[0].id;
   }
 
   logout(): void{

@@ -59,6 +59,18 @@ export const vocabulaireCategories = [
         ]
     },
     {
+        category: "Frans 4 Doorstroom",
+        items: [
+            {
+                name: "Example",
+                translation: 'Voorbeeld',
+                wordCount: 0,
+                usability: '-',
+                id: '4doorstroom-example'
+            },
+        ]
+    },
+    {
         category: "C'est Lancé 5",
         items: [
             {
@@ -129,17 +141,10 @@ export const vocabulaireCategories = [
                 usability: 'not determined',
                 id: 'lernova-6d-124'
             },
-            {
-                name: "Verbes de base",
-                translation: 'fundamentele werkwoorden',
-                wordCount: 0,
-                usability: 'not determined',
-                id: '6d-lernova-verbes-de-base'
-            },
         ],
     },
     {
-        category: "Examen",
+        category: "Examens",
         items: [
             {
                 name: "Examen 5 doorstroom Juni",
@@ -268,6 +273,12 @@ export const vocabLists: VocabLists = {
             { dutch: ["regelen", " organiseren"], french: "organiser"},
             { dutch: "beslissen", french: "décider"},
             { dutch: "bezoeken", french: 'visiter'},
+        ]},
+    "4doorstroom-example": {
+        id: "4doorstroom-example",
+        name: "4 Doorstroom voorbeeld",
+        words: [
+            { dutch: "een voorbeeld", french: "un exemple"},
         ]},
     "lance5-t1-e1": {
         id: "lance5-t1-e1",
@@ -1081,19 +1092,6 @@ export const vocabLists: VocabLists = {
             { dutch: 'vrienden maken', french: 'se faire des amis'},
             { dutch: 'voor altijd', french: 'à tout jamais'},
             { dutch: 'vlot spreken', french: 'parler couramment'},
-        ]},
-    "6d-lernova-verbes-de-base": {
-        id: "6d-lernova-verbes-de-base",
-        name: "Verbes de base 6d",
-        words: [
-            { dutch: ['regelen', ' oplossen'], french: 's\'arranger'},
-            { dutch: 'zich vervelen' , french: 's\'ennuyer'},
-            { dutch: 'uitoefenen' , french: 'exercer'},
-            { dutch: 'verplaatsen' , french: 'déplacer'},
-            { dutch: 'zich onderscheiden' , french: 'se différencier'},
-            { dutch: 'ruzie maken' , french: 'se disputer'},
-            { dutch: 'wandelen' , french: 'se promener'},
-            { dutch: 'zich vervelen' , french: 's\'ennuyer'},
         ]},
     "couleurs": {
         id: "couleurs",

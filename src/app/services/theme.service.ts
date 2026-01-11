@@ -4,13 +4,18 @@ import { Injectable } from '@angular/core';
 export class ThemeService {
   private storageKey = 'theme';
   readonly themes = [
-    'theme-1',
-    'theme-2',
-    'theme-3',
-    'theme-4',
-    'theme-5',
-    'theme-6',
-    'theme-7',
+    { id: 'theme-1', label: 'Groen' },
+    { id: 'theme-2', label: 'Donker Paars' },
+    { id: 'theme-3', label: 'Rood' },
+    { id: 'theme-4', label: 'Donker' },
+    { id: 'theme-5', label: 'Lavendel' },
+    { id: 'theme-6', label: 'Mos' },
+    { id: 'theme-7', label: 'Zacht Grijs' },
+    { id: 'theme-8', label: 'Terracotta' },
+    { id: 'theme-9', label: 'Munt' },
+    { id: 'theme-10', label: 'Zeegroen' },
+    { id: 'theme-11', label: 'Paars' },
+    { id: 'theme-12', label: 'Schemerblauw' },
   ];
 
   setTheme(name: string) {
