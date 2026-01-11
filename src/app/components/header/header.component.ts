@@ -1,21 +1,34 @@
 import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { Router } from '@angular/router';
+import { CommonModule } from '@angular/common';
+import { ThemeService } from '../../services/theme.service';
 
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [RouterModule],
+  imports: [RouterModule, CommonModule],
   templateUrl: './header.component.html',
-  styleUrl: './header.component.scss'
+  styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent {
-  constructor(private router: Router) {}
+  themes: string[] = [];
+  currentTheme: string | null = null;
+
+  constructor(private router: Router, private themeService: ThemeService) {
+    this.themes = this.themeService.themes;
+    this.currentTheme = this.themeService.getTheme() ?? this.themes[0];
+  }
 
   logout(): void{
     localStorage.removeItem('user');
     this.router.navigate(['/login']);
   }
   isMenuOpen = false;
+
+  selectTheme(name: string) {
+    this.themeService.setTheme(name);
+    this.currentTheme = name;
+  }
 
 }

@@ -1,47 +1,67 @@
 /* You can add global styles to this file, and also import other style files */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
-:root{
-    --background-color:#333d29;
+
+:root {
+    --background-color: #333d29;
     --accent-background-color: #656d4a;
     --font-color: white;
     --accent-font-color: white;
 }
-:root{
-    --background-color:#29293d;
+
+[data-theme="theme-1"] {
+    --background-color: #333d29;
+    --accent-background-color: #656d4a;
+    --font-color: white;
+    --accent-font-color: white;
+}
+
+[data-theme="theme-2"] {
+    --background-color: #29293d;
     --accent-background-color: #4a4c6d;
     --font-color: white;
     --accent-font-color: white;
 }
-:root{
-    --background-color:#ba181b;
+
+[data-theme="theme-3"] {
+    --background-color: #ba181b;
     --accent-background-color: #660708;
     --font-color: white;
     --accent-font-color: white;
 }
-:root{
-    --background-color:#17191A;
+
+[data-theme="theme-4"] {
+    --background-color: #17191A;
     --accent-background-color: #2C2F31;
     --font-color: white;
     --accent-font-color: white;
 }
-:root{
-    --background-color:#4a4e69;
+
+[data-theme="theme-5"] {
+    --background-color: #4a4e69;
     --accent-background-color: #979dc5;
     --font-color: #edede9;
     --accent-font-color: white;
 }
-:root{
-    --background-color:#292d2f;
+
+[data-theme="theme-6"] {
+    --background-color: #292d2f;
     --accent-background-color: #393e40;
     --font-color: #656d4a;
     --accent-font-color: white;
 }
-:root{
-    --background-color:#292d2f;
+
+[data-theme="theme-7"] {
+    --background-color: #292d2f;
     --accent-background-color: #393e40;
     --font-color: #dcdad7;
     --accent-font-color: white;
 }
+// :root{
+//     --background-color: rgb(34, 17, 17);
+//     --accent-background-color: rgb(99, 3, 3);
+//     --font-color: #dcdad7;
+//     --accent-font-color: white;
+// }
 body{
     font-family: "Open Sans", "Montserrat", 'Times New Roman', Times, serif;
     margin: 0;
