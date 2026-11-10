@@ -176,6 +176,18 @@ export const vocabulaireCategories = [
             },
         ]
     },
+    {
+        category: "Jente",
+        items: [
+            {
+                name: "Examen 5 doorstroom Juni",
+                translation: '',
+                wordCount: 269,
+                usability: 'not determined',
+                id: 'jente-01'
+            },
+        ]
+    },
 ]
 export type VocabWord = { dutch: string | string[]; french: string | string[]};
 
@@ -1748,4 +1760,45 @@ export const vocabLists: VocabLists = {
         { dutch: "ik wil naar het vliegveld", french: ["je veux aller à l'aéroport", "je voudrais aller à l’aéroport"]},
     ]
     },
+    "jente-01": {
+    id: "jente-01",
+    name: "Woordenlijst 1",
+    words: [
+        { dutch: "de school", french: "l'école" },
+        { dutch: "het station", french: "la gare" },
+        { dutch: "de winkel", french: "le magasin" },
+        { dutch: "het huis", french: "la maison" },
+        { dutch: "gaan", french: "aller" },
+        { dutch: "naar", french: ["à", "au"] },
+        { dutch: "dan", french: "alors" },
+        { dutch: "met", french: "avec" },
+        { dutch: "van", french: "de" },
+        { dutch: "(nu) al", french: "déjà" },
+        { dutch: ["daar", " er"], french: "là" },
+        { dutch: ["de", " het"], french: ["le", "la", "l'"] },
+        { dutch: "waar", french: "où" },
+        { dutch: "ik", french: "je" },
+        { dutch: ["jij", " je"], french: "tu" },
+        { dutch: "hij", french: "il" },
+        { dutch: ["zij", " ze (enkelvoud)"], french: "elle" },
+        { dutch: ["wij", " we"], french: "nous" },
+        { dutch: ["jullie", " u"], french: "vous" },
+        { dutch: ["zij", " ze (meervoud)"], french: ["ils", "elles"] },
+    ]
+    },
+        "jente-02": {
+    id: "jente-02",
+    name: "Zinnenlijst 1",
+    words: [
+        { dutch: "waar ga je naartoe", french: "tu vas où" },
+        { dutch: "ik ga naar het station", french: "je vais à la gare" },
+        { dutch: "waar gaat hij naartoe", french: "il va où" },
+        { dutch: "hij gaat naar huis", french: "il va à la maison" },
+        { dutch: "waar", french: "où ça" },
+        { dutch: "waar gaan ze naartoe", french: "elles vont où" },
+        { dutch: "ze gaan naar de winkel", french: "elles vont au magasin" },
+        { dutch: "waar gaan jullie naartoe", french: "vous allez où" },
+        { dutch: "wij gaan naar school", french: "nous allons à l'école" },
+    ]
+    }
 }
